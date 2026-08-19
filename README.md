@@ -1,440 +1,317 @@
-EcoFactory
+#  EcoFactory
 
-Sistema web Full Stack para monitoramento e gestão de processos de uma indústria inteligente.
+Sistema web para monitoramento e gestão de processos industriais, desenvolvido com foco em **indústria inteligente, produtividade e sustentabilidade**.
 
-📌 Sobre o projeto
+## 📌 Sobre o projeto
 
-A EcoFactory foi desenvolvida para centralizar informações importantes de uma indústria que anteriormente eram registradas em planilhas e documentos separados.
+A **EcoFactory** foi criada para solucionar dificuldades encontradas no controle de informações industriais que normalmente são registradas em planilhas e documentos separados.
 
-O sistema permite acompanhar máquinas, produção, consumo de recursos, indicadores de produtividade e sustentabilidade, além de registrar ocorrências relacionadas à saúde e segurança no trabalho.
+O sistema centraliza informações relacionadas a:
 
-O projeto foi desenvolvido como atividade do Curso Técnico em Informática para Internet, aplicando conceitos de desenvolvimento Full Stack, banco de dados, APIs, UI/UX, versionamento e testes.
+* 🏭 Máquinas utilizadas na produção;
+* 📦 Quantidade de produtos fabricados;
+* ⚡ Consumo de energia;
+* 💧 Consumo de água;
+* 🔧 Situação de funcionamento dos equipamentos;
+* 🦺 Ocorrências relacionadas à saúde e segurança;
+* 📊 Indicadores de produtividade e sustentabilidade.
 
-🎯 Objetivo
+## 🎯 Objetivo
 
-Desenvolver uma aplicação web responsiva capaz de integrar Front-End, Back-End e banco de dados, facilitando o monitoramento dos processos industriais e apoiando a análise de indicadores.
+Desenvolver uma aplicação web **Full Stack** capaz de integrar interface, API e banco de dados para facilitar o monitoramento dos processos industriais e auxiliar na tomada de decisões.
 
-⚙️ Funcionalidades
+## 🚀 Funcionalidades
 
-Funcionalidades obrigatórias
+### Obrigatórias
 
-CRUD completo de máquinas;
+* [ ] CRUD completo de máquinas;
+* [ ] Cadastro de produção;
+* [ ] Consulta de produção;
+* [ ] Dashboard com indicadores;
+* [ ] Persistência dos dados no PostgreSQL;
+* [ ] Integração entre Front-End e API REST;
+* [ ] Validação dos principais formulários;
+* [ ] Documentação do projeto.
 
-Cadastro e consulta de produção;
+### Complementares
 
-Dashboard com indicadores básicos;
+* [ ] Módulo de sustentabilidade;
+* [ ] Módulo de ocorrências de segurança;
+* [ ] Filtros e ordenação;
+* [ ] Gráficos;
+* [ ] Sistema de autenticação;
+* [ ] Deploy da aplicação.
 
-Persistência de dados no PostgreSQL;
+## 🛠️ Tecnologias
 
-Integração do Front-End com a API REST;
+### Front-End
 
-Validação dos principais formulários;
+* HTML5
+* CSS3
+* JavaScript
+* React
+* Vite
+* Fetch API ou Axios
 
-Documentação do projeto.
+### Back-End
 
-Funcionalidades complementares
+* Node.js
+* Express
 
-Módulo de sustentabilidade;
+### Banco de dados
 
-Módulo de ocorrências de segurança;
+* PostgreSQL
 
-Filtros e ordenação;
+### Versionamento
 
-Gráficos e indicadores;
+* Git
+* GitHub
 
-Autenticação de usuários;
+### Testes
 
-Deploy da aplicação.
+* Vitest
+* React Testing Library
+* Jest
+* Supertest
 
-📊 Indicadores
+### Prototipação
 
-O sistema pode apresentar indicadores como:
+* Figma ou ferramenta equivalente
 
-Quantidade total de produtos fabricados;
+## 📂 Estrutura do projeto
 
-Produção por período;
-
-Máquinas em funcionamento;
-
-Máquinas paradas ou em manutenção;
-
-Consumo de energia;
-
-Consumo de água;
-
-Indicadores de produtividade;
-
-Indicadores de sustentabilidade;
-
-Quantidade de ocorrências de segurança.
-
-🏗️ Arquitetura
-
-A aplicação utiliza uma arquitetura dividida em três partes principais:
-
-┌─────────────────────┐
-│      Front-End      │
-│   React + Vite      │
-└──────────┬──────────┘
-           │ HTTP / REST
-           ▼
-┌─────────────────────┐
-│       Back-End      │
-│   Node.js + Express │
-└──────────┬──────────┘
-           │ SQL
-           ▼
-┌─────────────────────┐
-│      PostgreSQL     │
-│     Banco de Dados  │
-└─────────────────────┘
-
-🛠️ Tecnologias utilizadas
-
-Front-End
-
-HTML5
-
-CSS3
-
-JavaScript
-
-React
-
-Vite
-
-Fetch API ou Axios
-
-Back-End
-
-Node.js
-
-Express
-
-Banco de dados
-
-PostgreSQL
-
-Testes
-
-Vitest
-
-React Testing Library
-
-Jest
-
-Supertest
-
-Versionamento
-
-Git
-
-GitHub
-
-Prototipação
-
-Figma, Canva ou ferramenta equivalente
-
-📁 Estrutura do projeto
-
-A estrutura pode ser organizada da seguinte forma:
-
-ecofactory/
+```text
+EcoFactory/
+│
 ├── frontend/
 │   ├── src/
 │   │   ├── components/
 │   │   ├── pages/
 │   │   ├── services/
-│   │   ├── hooks/
-│   │   ├── assets/
+│   │   ├── styles/
 │   │   └── App.jsx
-│   ├── public/
-│   ├── package.json
-│   └── vite.config.js
+│   └── package.json
 │
 ├── backend/
 │   ├── src/
 │   │   ├── controllers/
 │   │   ├── routes/
 │   │   ├── models/
-│   │   ├── services/
-│   │   ├── middlewares/
-│   │   ├── config/
+│   │   ├── database/
 │   │   └── server.js
-│   ├── package.json
-│   └── .env
+│   └── package.json
 │
 ├── database/
-│   ├── schema.sql
-│   └── seed.sql
+│   └── schema.sql
 │
 ├── tests/
 │
 ├── .gitignore
 └── README.md
+```
 
-🗄️ Principais entidades
+## 🗄️ Banco de dados
 
-O banco de dados pode ser organizado com entidades como:
+O PostgreSQL será responsável pelo armazenamento das informações do sistema.
 
-Máquinas — informações e situação dos equipamentos;
+Principais tabelas previstas:
 
-Produção — registros de produtos fabricados;
+| Tabela        | Descrição                 |
+| ------------- | ------------------------- |
+| `usuarios`    | Usuários do sistema       |
+| `maquinas`    | Informações das máquinas  |
+| `producoes`   | Registros de produção     |
+| `consumo`     | Consumo de água e energia |
+| `ocorrencias` | Registros de segurança    |
 
-Consumo — dados de consumo de água e energia;
+## 🔄 Arquitetura
 
-Ocorrências — registros relacionados à saúde e segurança;
+```text
+┌──────────────────────┐
+│      FRONT-END       │
+│ React / HTML / CSS   │
+│     JavaScript       │
+└──────────┬───────────┘
+           │
+           │ HTTP / Fetch / Axios
+           ▼
+┌──────────────────────┐
+│       API REST       │
+│   Node.js + Express  │
+└──────────┬───────────┘
+           │
+           │ SQL
+           ▼
+┌──────────────────────┐
+│      PostgreSQL      │
+│      Database        │
+└──────────────────────┘
+```
 
-Usuários — acesso ao sistema, caso a autenticação seja implementada.
+## 📊 Dashboard
 
-🚀 Como executar o projeto
+O Dashboard será responsável por apresentar os principais indicadores da indústria.
 
-Pré-requisitos
+Exemplos:
 
-Antes de iniciar, instale:
+* Máquinas em funcionamento;
+* Máquinas paradas;
+* Produção total;
+* Consumo de energia;
+* Consumo de água;
+* Quantidade de ocorrências;
+* Indicadores de produtividade;
+* Indicadores de sustentabilidade.
 
-Node.js;
+## ⚙️ Como executar o projeto
 
-npm;
+### 1. Clonar o repositório
 
-PostgreSQL;
+```bash
+git clone https://github.com/SEU-USUARIO/EcoFactory.git
+```
 
-Git.
+### 2. Entrar na pasta
 
-1. Clonar o repositório
+```bash
+cd EcoFactory
+```
 
-git clone URL_DO_REPOSITORIO
-cd ecofactory
+### 3. Instalar as dependências do Front-End
 
-2. Instalar as dependências do Front-End
-
+```bash
 cd frontend
 npm install
+```
 
-3. Instalar as dependências do Back-End
+### 4. Executar o Front-End
+
+```bash
+npm run dev
+```
+
+### 5. Instalar as dependências do Back-End
 
 Em outro terminal:
 
+```bash
 cd backend
 npm install
+```
 
-4. Configurar o banco de dados
+### 6. Executar o Back-End
 
-Crie um banco PostgreSQL e execute o arquivo:
-
-database/schema.sql
-
-Caso exista um arquivo de dados iniciais:
-
-database/seed.sql
-
-5. Configurar as variáveis de ambiente
-
-Crie um arquivo .env dentro da pasta backend:
-
-PORT=3000
-DATABASE_URL=sua_string_de_conexao
-
-Não compartilhe informações sensíveis do arquivo .env no GitHub.
-
-6. Iniciar o Back-End
-
-cd backend
+```bash
 npm run dev
+```
 
-7. Iniciar o Front-End
+## 🔐 Variáveis de ambiente
 
-Em outro terminal:
-
-cd frontend
-npm run dev
-
-Depois, acesse o endereço informado pelo Vite no terminal.
-
-🔌 API REST
-
-A API será responsável pela comunicação entre o Front-End e o banco de dados.
-
-Exemplos de endpoints:
-
-Método
-
-Endpoint
-
-Função
-
-GET
-
-/api/maquinas
-
-Listar máquinas
-
-GET
-
-/api/maquinas/:id
-
-Consultar uma máquina
-
-POST
-
-/api/maquinas
-
-Cadastrar máquina
-
-PUT
-
-/api/maquinas/:id
-
-Atualizar máquina
-
-DELETE
-
-/api/maquinas/:id
-
-Excluir máquina
-
-GET
-
-/api/producao
-
-Consultar produção
-
-POST
-
-/api/producao
-
-Registrar produção
-
-GET
-
-/api/indicadores
-
-Consultar indicadores
-
-GET
-
-/api/ocorrencias
-
-Consultar ocorrências
-
-Os endpoints podem ser ajustados conforme a implementação final do projeto.
-
-🧪 Testes
-
-Para executar os testes, utilize os comandos definidos no package.json.
+O Back-End deverá utilizar um arquivo `.env` para armazenar configurações do banco de dados e outras informações sensíveis.
 
 Exemplo:
 
+```env
+PORT=3000
+DATABASE_URL=sua_url_do_postgresql
+```
+
+> O arquivo `.env` não deve ser enviado para o GitHub.
+
+## 🧪 Testes
+
+Para executar os testes do projeto:
+
+```bash
 npm test
+```
 
 Os testes devem verificar principalmente:
 
-Componentes do Front-End;
+* Funcionamento da API;
+* Cadastro de máquinas;
+* Atualização de máquinas;
+* Exclusão de máquinas;
+* Cadastro de produção;
+* Validação dos formulários;
+* Funcionamento dos componentes principais.
 
-Validação de formulários;
+## 🌿 Sustentabilidade
 
-Rotas da API;
+A EcoFactory também possui como objetivo auxiliar no acompanhamento de indicadores ambientais.
 
-Operações CRUD;
+O sistema poderá registrar:
 
-Respostas da API;
+* 💧 Consumo de água;
+* ⚡ Consumo de energia;
+* 📈 Evolução do consumo;
+* ♻️ Indicadores de sustentabilidade.
 
-Integração com o banco de dados, quando aplicável.
+## 🦺 Segurança
 
-🔐 Segurança
+O módulo de segurança permitirá registrar ocorrências relacionadas ao ambiente industrial.
 
-Algumas boas práticas devem ser utilizadas durante o desenvolvimento:
+Exemplos de informações:
 
-Não enviar arquivos .env para o GitHub;
+* Descrição da ocorrência;
+* Data;
+* Setor;
+* Gravidade;
+* Status;
+* Observações.
 
-Validar dados recebidos pela API;
+## 👥 Público-alvo
 
-Utilizar consultas parametrizadas;
+O projeto é destinado principalmente a **estudantes do Curso Técnico em Informática para Internet**, servindo também como aplicação prática dos conhecimentos de:
 
-Validar formulários no Front-End e no Back-End;
+* Desenvolvimento Web;
+* Banco de Dados;
+* APIs;
+* UI/UX;
+* Git e GitHub;
+* Testes de software;
+* Desenvolvimento Full Stack.
 
-Controlar permissões caso a autenticação seja implementada.
+## 📚 Objetivos de aprendizagem
 
-🌱 Sustentabilidade
+Durante o desenvolvimento serão aplicados conhecimentos de:
 
-O sistema permite acompanhar informações relacionadas ao uso de recursos naturais e gerar indicadores que auxiliem na identificação de oportunidades de melhoria.
+1. Planejamento de software;
+2. UI/UX;
+3. Desenvolvimento Front-End;
+4. Desenvolvimento Back-End;
+5. Criação de APIs REST;
+6. Banco de dados relacionais;
+7. Integração entre sistemas;
+8. Versionamento com Git;
+9. Testes automatizados;
+10. Documentação técnica.
 
-Entre os dados monitorados estão:
+## 🤝 Desenvolvimento colaborativo
 
-Consumo de água;
+O projeto deverá utilizar o **Git e GitHub** para controlar as versões do código e permitir o desenvolvimento colaborativo.
 
-Consumo de energia;
+Sugestão de branches:
 
-Produção;
+```text
+main
+├── frontend
+├── backend
+├── database
+└── tests
+```
 
-Indicadores de sustentabilidade.
+## 📄 Status do projeto
 
-🦺 Saúde e segurança
+🚧 **Em desenvolvimento**
 
-O módulo de ocorrências permite registrar situações relacionadas à saúde e segurança no ambiente industrial.
+O projeto será desenvolvido de forma incremental, começando pelas funcionalidades obrigatórias e posteriormente adicionando os recursos complementares.
 
-Os registros podem conter informações como:
+## 👨‍💻 Projeto acadêmico
 
-Data da ocorrência;
+**Projeto: EcoFactory — Indústria Inteligente**
 
-Local;
+Desenvolvido por estudantes do **Curso Técnico em Informática para Internet**.
 
-Descrição;
-
-Tipo de ocorrência;
-
-Nível de prioridade;
-
-Situação;
-
-Medidas tomadas.
-
-🎨 UI/UX
-
-A interface deve seguir princípios básicos de UI/UX, buscando:
-
-Facilidade de navegação;
-
-Organização das informações;
-
-Responsividade;
-
-Consistência visual;
-
-Boa legibilidade;
-
-Feedback para ações realizadas pelo usuário.
-
-🌿 Versionamento
-
-O projeto utiliza Git e GitHub para controle de versão e trabalho colaborativo.
-
-Exemplos de commits:
-
-feat: adiciona CRUD de máquinas
-fix: corrige validação do cadastro
-docs: atualiza README
-style: ajusta responsividade do dashboard
-test: adiciona testes da API de máquinas
-
-👥 Equipe
-
-Projeto: EcoFactory
-Curso: Técnico em Informática para Internet
-Área: Desenvolvimento Full Stack
-
-Integrantes
-
-Nome do integrante 1
-
-Nome do integrante 2
-
-Nome do integrante 3
-
-Nome do integrante 4
-
-📄 Licença
-
-Projeto desenvolvido para fins educacionais no Curso Técnico em Informática para Internet.
-
-EcoFactory — Tecnologia para uma indústria mais inteligente e sustentável. 🌱🏭# EcoFactory
+<img width="1536" height="1024" alt="4c94d96e-599e-4446-a0ea-91debadb600e" src="https://github.com/user-attachments/assets/909c0063-e70d-4033-945f-2142a854eae9" />
+![Uploading 4c94d96e-599e-4446-a0ea-91debadb600e.png…]()

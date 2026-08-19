@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>EcoFactory - Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="dashboard.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <h2>🌱 EcoFactory</h2>
+
+    <ul>
+      <li class="active"><i class="fa fa-chart-line"></i> Dashboard</li>
+      <li><i class="fa fa-industry"></i> Produção</li>
+      <li><i class="fa fa-leaf"></i> Sustentabilidade</li>
+      <li><i class="fa fa-cog"></i> Configurações</li>
+    </ul>
+
+    <button onclick="logout()" class="logout">Sair</button>
+  </aside>
+
+  <!-- CONTEÚDO -->
+  <main class="content">
+
+    <header>
+      <h1>Dashboard</h1>
+
+      <div class="user-box">
+        <span id="userName"></span>
+        <small id="userEmail"></small>
+      </div>
+    </header>
+
+    <!-- CARDS -->
+    <div class="cards">
+      <div class="card">
+        <h3>Produção</h3>
+        <p id="prod">0</p>
+      </div>
+
+      <div class="card">
+        <h3>Eficiência</h3>
+        <p id="eff">0%</p>
+      </div>
+
+      <div class="card">
+        <h3>Consumo</h3>
+        <p id="cons">0 kWh</p>
+      </div>
+
+      <div class="card">
+        <h3>Emissões</h3>
+        <p id="emi">0 kg CO₂</p>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h2>Bem-vindo ao sistema</h2>
+      <p id="welcomeMsg"></p>
+    </div>
+
+  </main>
+
+</div>
+
+<script src="dashboard.js"></script>
+
+</body>
+</html>

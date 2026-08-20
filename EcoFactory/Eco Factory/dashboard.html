@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>EcoFactory - Dashboard</title>
+
+    <link rel="stylesheet" href="dashboard.css">
+
+</head>
+
+<body>
+
+<div class="dashboard-page">
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside class="sidebar">
+
+
+        <!-- LOGO -->
+
+        <div class="sidebar-logo">
+
+            <div class="logo-icon">
+                ♻
+            </div>
+
+            <div>
+
+                <h2>
+                    EcoFactory
+                </h2>
+
+                <span>
+                    Indústria Inteligente
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- MENU -->
+
+        <nav class="menu">
+
+            <p class="menu-title">
+                
+            </p>
+
+
+            <!-- DASHBOARD -->
+
+            <a href="dashboard.html"
+               class="menu-item active">
+
+                <span>▣</span>
+
+                Dashboard
+
+            </a>
+
+
+            <!-- MÁQUINAS -->
+
+            <a href="maquinas.html"
+               class="menu-item">
+
+                <span>⚙</span>
+
+                Máquinas
+
+            </a>
+
+
+            <!-- PRODUÇÃO -->
+
+            <a href="producao.html"
+               class="menu-item">
+
+                <span>▤</span>
+
+                Produção
+
+            </a>
+
+
+            <!-- ENERGIA E ÁGUA -->
+
+            <a href="consumo.html"
+               class="menu-item">
+
+                <span>◉</span>
+
+                Energia & Água
+
+            </a>
+
+
+            <!-- OCORRÊNCIAS -->
+
+            <a href="ocorrencias.html"
+               class="menu-item">
+
+                <span>⚠</span>
+
+                Ocorrências
+
+            </a>
+
+
+            <!-- INDICADORES -->
+
+            <a href="indicadores.html"
+               class="menu-item">
+
+                <span>♻</span>
+
+                Indicadores
+
+            </a>
+
+
+            <!-- CONFIGURAÇÕES -->
+
+            <a href="#"
+               class="menu-item">
+
+                <span>⚙</span>
+
+                Configurações
+
+            </a>
+
+        </nav>
+
+
+        <!-- SAIR -->
+
+        <div class="sidebar-bottom">
+
+            <a href="#"
+               id="logout"
+               class="menu-item logout">
+
+                <span>↪</span>
+
+                Sair
+
+            </a>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         CONTEÚDO PRINCIPAL
+    ====================================================== -->
+
+    <main class="main-content">
+
+
+        <!-- TOPBAR -->
+
+        <header class="topbar">
+
+
+            <div>
+
+                <h1>
+                    Dashboard
+                </h1>
+
+                <p>
+                    Visão geral da EcoFactory
+                </p>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 USUÁRIO
+            ================================================== -->
+
+            <a href="perfil.html"
+               class="user"
+               id="userProfile"
+               title="Abrir meu perfil">
+
+
+                <div>
+
+                    <strong id="userName">
+                        Usuário
+                    </strong>
+
+                    <small>
+                        Meu perfil
+                    </small>
+
+                </div>
+
+
+                <div class="user-avatar"
+                     id="userAvatar">
+
+                    U
+
+                </div>
+
+            </a>
+
+        </header>
+
+
+
+        <!-- =================================================
+             CARDS
+        ================================================== -->
+
+        <section class="cards">
+
+
+            <!-- MÁQUINAS -->
+
+            <div class="card">
+
+                <div class="card-icon">
+                    ⚙️
+                </div>
+
+                <p>
+                    Máquinas
+                </p>
+
+                <h2 id="totalMaquinas">
+                    0
+                </h2>
+
+                <small>
+                    Equipamentos cadastrados
+                </small>
+
+            </div>
+
+
+
+            <!-- PRODUÇÃO -->
+
+            <div class="card">
+
+                <div class="card-icon">
+                    📦
+                </div>
+
+                <p>
+                    Produção
+                </p>
+
+                <h2 id="totalProducao">
+                    0
+                </h2>
+
+                <small>
+                    Produtos fabricados
+                </small>
+
+            </div>
+
+
+
+            <!-- ENERGIA -->
+
+            <div class="card">
+
+                <div class="card-icon">
+                    ⚡
+                </div>
+
+                <p>
+                    Energia
+                </p>
+
+                <h2 id="energia">
+                    82%
+                </h2>
+
+                <small>
+                    Eficiência energética
+                </small>
+
+            </div>
+
+
+
+            <!-- ÁGUA -->
+
+            <div class="card">
+
+                <div class="card-icon">
+                    💧
+                </div>
+
+                <p>
+                    Água
+                </p>
+
+                <h2 id="agua">
+                    76%
+                </h2>
+
+                <small>
+                    Índice de economia
+                </small>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             GRÁFICO + STATUS
+        ================================================== -->
+
+        <section class="content-grid">
+
+
+            <!-- GRÁFICO -->
+
+            <div class="panel">
+
+                <h2>
+                    Produção mensal
+                </h2>
+
+                <p>
+                    Quantidade de produtos fabricados
+                </p>
+
+
+                <div class="chart">
+
+                    <div class="bar"
+                         style="height:45%;"
+                         title="Janeiro">
+                    </div>
+
+                    <div class="bar"
+                         style="height:60%;"
+                         title="Fevereiro">
+                    </div>
+
+                    <div class="bar"
+                         style="height:52%;"
+                         title="Março">
+                    </div>
+
+                    <div class="bar"
+                         style="height:75%;"
+                         title="Abril">
+                    </div>
+
+                    <div class="bar"
+                         style="height:65%;"
+                         title="Maio">
+                    </div>
+
+                    <div class="bar"
+                         style="height:88%;"
+                         title="Junho">
+                    </div>
+
+                    <div class="bar"
+                         style="height:95%;"
+                         title="Julho">
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- STATUS -->
+
+            <div class="panel">
+
+                <h2>
+                    Status das máquinas
+                </h2>
+
+                <p>
+                    Situação atual dos equipamentos
+                </p>
+
+
+                <div class="status green">
+
+                    🟢
+
+                    <span>
+
+                        <strong id="maquinasAtivas">
+                            0
+                        </strong>
+
+                        funcionando
+
+                    </span>
+
+                </div>
+
+
+
+                <div class="status yellow">
+
+                    🟡
+
+                    <span>
+
+                        <strong id="maquinasManutencao">
+                            0
+                        </strong>
+
+                        em manutenção
+
+                    </span>
+
+                </div>
+
+
+
+                <div class="status red">
+
+                    🔴
+
+                    <span>
+
+                        <strong id="maquinasParadas">
+                            0
+                        </strong>
+
+                        parada
+
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             INDICADORES
+        ================================================== -->
+
+        <section class="content-grid">
+
+
+            <!-- SUSTENTABILIDADE -->
+
+            <div class="panel">
+
+                <h2>
+                    Indicadores de sustentabilidade
+                </h2>
+
+                <p>
+                    Desempenho da indústria
+                </p>
+
+
+
+                <!-- ENERGIA -->
+
+                <div class="indicator">
+
+                    <div>
+
+                        <span>
+                            Eficiência energética
+                        </span>
+
+                        <strong>
+                            82%
+                        </strong>
+
+                    </div>
+
+
+                    <div class="progress">
+
+                        <div style="width:82%;"></div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ÁGUA -->
+
+                <div class="indicator">
+
+                    <div>
+
+                        <span>
+                            Economia de água
+                        </span>
+
+                        <strong>
+                            76%
+                        </strong>
+
+                    </div>
+
+
+                    <div class="progress">
+
+                        <div style="width:76%;"></div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PRODUTIVIDADE -->
+
+                <div class="indicator">
+
+                    <div>
+
+                        <span>
+                            Produtividade
+                        </span>
+
+                        <strong>
+                            91%
+                        </strong>
+
+                    </div>
+
+
+                    <div class="progress">
+
+                        <div style="width:91%;"></div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ATIVIDADES -->
+
+            <div class="panel">
+
+                <h2>
+                    Atividades recentes
+                </h2>
+
+                <p>
+                    Últimas atualizações
+                </p>
+
+
+                <div class="activity">
+                    ⚙️ Máquina cadastrada
+                </div>
+
+
+                <div class="activity">
+                    📦 Produção atualizada
+                </div>
+
+
+                <div class="activity">
+                    🔧 Manutenção registrada
+                </div>
+
+
+                <div class="activity">
+                    📊 Indicadores atualizados
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             ACESSO RÁPIDO
+        ================================================== -->
+
+        <section class="panel quick-panel">
+
+            <h2>
+                Acesso rápido
+            </h2>
+
+            <p>
+                Acesse rapidamente as principais áreas do sistema.
+            </p>
+
+
+            <div class="quick-actions">
+
+
+                <a href="maquinas.html"
+                   class="quick-button">
+
+                    ⚙️
+
+                    <span>
+                        Máquinas
+                    </span>
+
+                </a>
+
+
+
+                <a href="producao.html"
+                   class="quick-button">
+
+                    📦
+
+                    <span>
+                        Produção
+                    </span>
+
+                </a>
+
+
+
+                <a href="indicadores.html"
+                   class="quick-button">
+
+                    📈
+
+                    <span>
+                        Indicadores
+                    </span>
+
+                </a>
+
+
+
+                <a href="ocorrencias.html"
+                   class="quick-button">
+
+                    ⚠️
+
+                    <span>
+                        Ocorrências
+                    </span>
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             FOOTER
+        ================================================== -->
+
+        <footer>
+
+            © 2026 EcoFactory.
+            Todos os direitos reservados.
+
+        </footer>
+
+    </main>
+
+</div>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+====================================================== -->
+
+<script src="dashboard.js"></script>
+
+</body>
+
+</html>

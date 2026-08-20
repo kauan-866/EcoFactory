@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EcoFactory - Criar Conta</title>
+
+    <!-- CSS DO CADASTRO -->
+    <link rel="stylesheet" href="cadastro.css">
+
+</head>
+
+<body>
+
+    <main class="cadastro-page">
+
+
+        <!-- =========================
+             IMAGEM LATERAL
+        ========================== -->
+
+        <section class="cadastro-image">
+
+            <div class="image-overlay">
+
+                <div class="eco-symbol">
+                    ♻
+                </div>
+
+                <h1>
+                    EcoFactory
+                </h1>
+
+                <p>
+                    Indústria Inteligente
+                </p>
+
+                <div class="slogan">
+
+                    Tecnologia para uma indústria
+                    mais eficiente e sustentável.
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             ÁREA DO CADASTRO
+        ========================== -->
+
+        <section class="cadastro-container">
+
+            <div class="cadastro-box">
+
+
+                <!-- LOGO -->
+
+                <div class="cadastro-logo">
+
+                    <div class="logo-icon">
+                        ⚙
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            EcoFactory
+                        </h2>
+
+                        <span>
+                            Indústria Inteligente
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- TÍTULO -->
+
+                <div class="cadastro-title">
+
+                    <h1>
+                        Crie sua conta
+                    </h1>
+
+                    <p>
+                        Cadastre-se para acessar o sistema
+                    </p>
+
+                </div>
+
+
+                <!-- =========================
+                     FORMULÁRIO
+                ========================== -->
+
+                <form id="cadastroForm">
+
+
+                    <!-- NOME -->
+
+                    <div class="input-group">
+
+                        <label for="nome">
+                            Nome completo
+                        </label>
+
+                        <input
+                            type="text"
+                            id="nome"
+                            placeholder="Digite seu nome completo"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- EMAIL -->
+
+                    <div class="input-group">
+
+                        <label for="email">
+                            E-mail
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="seu@email.com"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- SENHA -->
+
+                    <div class="input-group">
+
+                        <label for="senha">
+                            Senha
+                        </label>
+
+                        <div class="password-input">
+
+                            <input
+                                type="password"
+                                id="senha"
+                                placeholder="Crie uma senha"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                id="mostrarSenha"
+                                class="eye-button"
+                            >
+                                👁
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- CONFIRMAR SENHA -->
+
+                    <div class="input-group">
+
+                        <label for="confirmarSenha">
+                            Confirmar senha
+                        </label>
+
+                        <div class="password-input">
+
+                            <input
+                                type="password"
+                                id="confirmarSenha"
+                                placeholder="Digite a senha novamente"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                id="mostrarConfirmacao"
+                                class="eye-button"
+                            >
+                                👁
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- TERMOS -->
+
+                    <label class="terms">
+
+                        <input
+                            type="checkbox"
+                            id="termos"
+                            required
+                        >
+
+                        <span>
+
+                            Eu concordo com os
+
+                            <a href="#">
+                                termos de uso
+                            </a>
+
+                            e a
+
+                            <a href="#">
+                                política de privacidade
+                            </a>.
+
+                        </span>
+
+                    </label>
+
+
+                    <!-- BOTÃO -->
+
+                    <button
+                        type="submit"
+                        class="cadastro-button"
+                    >
+                        Criar conta
+                    </button>
+
+
+                    <!-- MENSAGEM -->
+
+                    <p
+                        id="mensagem"
+                        class="mensagem"
+                    ></p>
+
+
+                    <!-- VOLTAR PARA LOGIN -->
+
+                    <div class="login-link">
+
+                        <span>
+                            Já possui uma conta?
+                        </span>
+
+                        <a href="index.html">
+                            Entrar
+                        </a>
+
+                    </div>
+
+                </form>
+
+
+                <!-- RODAPÉ -->
+
+                <footer class="cadastro-footer">
+
+                    © 2026 EcoFactory.
+                    Todos os direitos reservados.
+
+                </footer>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- JAVASCRIPT DO CADASTRO -->
+
+    <script src="cadastro.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>EcoFactory - Detalhes da Máquina</title>
+
+    <link rel="stylesheet" href="maquina-detalhes.css">
+
+</head>
+
+<body>
+
+<div class="dashboard-page">
+
+    <!-- =========================
+         SIDEBAR
+    ========================== -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+
+            <div class="logo-icon">
+                ♻
+            </div>
+
+            <div>
+
+                <h2>EcoFactory</h2>
+
+                <span>
+                    Indústria Inteligente
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <nav class="menu">
+
+            <p class="menu-title">
+                
+            </p>
+
+            <a
+                href="dashboard.html"
+                class="menu-item"
+            >
+                <span>▣</span>
+                Dashboard
+            </a>
+
+            <a
+                href="maquinas.html"
+                class="menu-item active"
+            >
+                <span>⚙</span>
+                Máquinas
+            </a>
+
+            <a
+                href="producao.html"
+                class="menu-item"
+            >
+                <span>▤</span>
+                Produção
+            </a>
+
+            <a
+                href="#"
+                class="menu-item"
+            >
+                <span>◉</span>
+                Energia & Água
+            </a>
+
+            <a
+                href="#"
+                class="menu-item"
+            >
+                <span>⚠</span>
+                Ocorrências
+            </a>
+
+            <a
+                href="#"
+                class="menu-item"
+            >
+                <span>♻</span>
+                Indicadores
+            </a>
+
+            <a
+                href="#"
+                class="menu-item"
+            >
+                <span>⚙</span>
+                Configurações
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <a
+                href="#"
+                id="logout"
+                class="menu-item logout"
+            >
+                <span>↪</span>
+                Sair
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =========================
+         CONTEÚDO
+    ========================== -->
+
+    <main class="main-content">
+
+        <!-- TOPBAR -->
+
+        <header class="topbar">
+
+            <div>
+
+                <h1>
+                    Detalhes da Máquina
+                </h1>
+
+                <p>
+                    Início / Máquinas / Detalhes
+                </p>
+
+            </div>
+
+
+            <div class="user">
+
+                <div>
+
+                    <strong id="nomeUsuario">
+                        Olá, Cliente
+                    </strong>
+
+                    <small>
+                        Administrador
+                    </small>
+
+                </div>
+
+                <div
+                    class="user-avatar"
+                    id="userAvatar"
+                >
+                    C
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- =========================
+             CABEÇALHO
+        ========================== -->
+
+        <section class="machine-header">
+
+            <div>
+
+                <h2 id="tituloMaquina">
+                    Máquina
+                </h2>
+
+                <p>
+                    Visualização completa do equipamento
+                </p>
+
+            </div>
+
+
+            <button
+                class="back-button"
+                id="voltarMaquinas"
+            >
+                ← Voltar
+            </button>
+
+        </section>
+
+
+        <!-- =========================
+             INFORMAÇÕES PRINCIPAIS
+        ========================== -->
+
+        <section class="machine-grid">
+
+            <!-- IMAGEM -->
+
+            <div class="panel machine-image-panel">
+
+                <div class="machine-image">
+
+                    <img
+                        id="imagemMaquina"
+                        src="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&fit=crop&w=900&q=80"
+                        alt="Máquina industrial"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <!-- INFORMAÇÕES -->
+
+            <div class="panel">
+
+                <div class="panel-title">
+
+                    <h2>
+                        Informações da Máquina
+                    </h2>
+
+                    <span
+                        id="statusMaquina"
+                        class="status ativo"
+                    >
+                        Ativo
+                    </span>
+
+                </div>
+
+
+                <div class="info-grid">
+
+                    <div class="info-item">
+
+                        <span>ID</span>
+
+                        <strong id="idMaquina">
+                            M001
+                        </strong>
+
+                    </div>
+
+
+                    <div class="info-item">
+
+                        <span>Nome</span>
+
+                        <strong id="nomeMaquina">
+                            Prensa Hidráulica
+                        </strong>
+
+                    </div>
+
+
+                    <div class="info-item">
+
+                        <span>Tipo</span>
+
+                        <strong id="tipoMaquina">
+                            Prensa
+                        </strong>
+
+                    </div>
+
+
+                    <div class="info-item">
+
+                        <span>Localização</span>
+
+                        <strong id="localizacaoMaquina">
+                            Setor A
+                        </strong>
+
+                    </div>
+
+
+                    <div class="info-item">
+
+                        <span>Data de instalação</span>
+
+                        <strong id="dataInstalacao">
+                            12/03/2021
+                        </strong>
+
+                    </div>
+
+
+                    <div class="info-item">
+
+                        <span>Última manutenção</span>
+
+                        <strong id="ultimaManutencao">
+                            10/05/2024
+                        </strong>
+
+                    </div>
+
+
+                    <div class="info-item">
+
+                        <span>Próxima manutenção</span>
+
+                        <strong id="proximaManutencao">
+                            10/11/2024
+                        </strong>
+
+                    </div>
+
+
+                    <div class="info-item">
+
+                        <span>Responsável</span>
+
+                        <strong id="responsavel">
+                            João Silva
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             DESCRIÇÃO
+        ========================== -->
+
+        <section class="panel">
+
+            <h2>
+                Descrição
+            </h2>
+
+            <p
+                class="description"
+                id="descricaoMaquina"
+            >
+                Máquina industrial utilizada para conformação
+                de metais.
+            </p>
+
+        </section>
+
+
+        <!-- =========================
+             INDICADORES
+        ========================== -->
+
+        <section class="cards">
+
+            <div class="card">
+
+                <div class="card-icon">
+                    ⚡
+                </div>
+
+                <span>
+                    Consumo de energia
+                </span>
+
+                <strong id="energia">
+                    85%
+                </strong>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-icon">
+                    📈
+                </div>
+
+                <span>
+                    Eficiência
+                </span>
+
+                <strong id="eficiencia">
+                    92%
+                </strong>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-icon">
+                    📦
+                </div>
+
+                <span>
+                    Produção
+                </span>
+
+                <strong id="producao">
+                    1.250
+                </strong>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-icon">
+                    ⏱
+                </div>
+
+                <span>
+                    Horas trabalhadas
+                </span>
+
+                <strong id="horas">
+                    1.842 h
+                </strong>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             HISTÓRICO
+        ========================== -->
+
+        <section class="panel">
+
+            <div class="panel-title">
+
+                <div>
+
+                    <h2>
+                        Histórico de Manutenções
+                    </h2>
+
+                    <p>
+                        Registros de manutenção da máquina
+                    </p>
+
+                </div>
+
+                <button
+                    class="maintenance-button"
+                    id="novaManutencao"
+                >
+                    + Registrar manutenção
+                </button>
+
+            </div>
+
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Data</th>
+
+                            <th>Tipo</th>
+
+                            <th>Descrição</th>
+
+                            <th>Responsável</th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="historicoManutencao">
+
+                        <tr>
+
+                            <td>10/05/2024</td>
+
+                            <td>
+                                Preventiva
+                            </td>
+
+                            <td>
+                                Lubrificação e verificação geral
+                            </td>
+
+                            <td>
+                                João Silva
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>15/03/2024</td>
+
+                            <td>
+                                Corretiva
+                            </td>
+
+                            <td>
+                                Troca de válvula hidráulica
+                            </td>
+
+                            <td>
+                                Maria Santos
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <footer>
+
+            © 2026 EcoFactory.
+            Todos os direitos reservados.
+
+        </footer>
+
+    </main>
+
+</div>
+
+
+<!-- =========================
+     MODAL MANUTENÇÃO
+========================== -->
+
+<div
+    class="modal"
+    id="modalManutencao"
+>
+
+    <div class="modal-box">
+
+        <button
+            class="close-button"
+            id="fecharManutencao"
+        >
+            ×
+        </button>
+
+        <h2>
+            Registrar manutenção
+        </h2>
+
+        <p>
+            Adicione uma nova manutenção.
+        </p>
+
+
+        <form id="formManutencao">
+
+            <label>
+                Tipo
+            </label>
+
+            <select id="tipoManutencao" required>
+
+                <option value="">
+                    Selecione
+                </option>
+
+                <option value="Preventiva">
+                    Preventiva
+                </option>
+
+                <option value="Corretiva">
+                    Corretiva
+                </option>
+
+                <option value="Inspeção">
+                    Inspeção
+                </option>
+
+            </select>
+
+
+            <label>
+                Descrição
+            </label>
+
+            <textarea
+                id="descricaoManutencao"
+                placeholder="Descreva a manutenção..."
+                required
+            ></textarea>
+
+
+            <label>
+                Responsável
+            </label>
+
+            <input
+                type="text"
+                id="responsavelManutencao"
+                placeholder="Nome do responsável"
+                required
+            >
+
+
+            <button
+                type="submit"
+                class="save-button"
+            >
+                Salvar manutenção
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<script src="maquina-detalhes.js"></script>
+
+</body>
+
+</html>

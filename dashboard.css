@@ -1,0 +1,1072 @@
+/* =========================================================
+   ECOFACTORY - DASHBOARD
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Inter, Arial, Helvetica, sans-serif;
+    background: var(--fundo);
+    color: var(--escuro);
+}
+
+button,
+input,
+select {
+    font-family: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   CORES
+========================================================= */
+
+:root {
+    --verde: #22A652;
+    --verde-claro: #4ade80;
+    --verde-bg: #e6f6ec;
+
+    --azul: #3b82f6;
+    --azul-bg: #dbeafe;
+
+    --escuro: #1f2937;
+    --cinza: #6b7280;
+    --cinza-claro: #9ca3af;
+
+    --fundo: #f6f8fb;
+    --branco: #ffffff;
+    --borda: #e5e7eb;
+
+    --amarelo: #eab308;
+    --amarelo-bg: #fef9c3;
+
+    --vermelho: #ef4444;
+    --vermelho-bg: #fee2e2;
+
+    --teal: #14b8a6;
+    --teal-bg: #ccfbf1;
+
+    --sombra: 0 2px 10px rgba(0, 0, 0, 0.04);
+}
+
+
+/* =========================================================
+   LAYOUT & SIDEBAR
+========================================================= */
+
+.dashboard-page {
+    min-height: 100vh;
+    display: flex;
+}
+
+.sidebar {
+    width: 245px;
+    min-height: 100vh;
+
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+
+    background: var(--branco);
+    border-right: 1px solid var(--borda);
+
+    display: flex;
+    flex-direction: column;
+
+    z-index: 1000;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.sidebar-logo {
+    height: 100px;
+    padding: 20px 18px;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    border-bottom: 1px solid var(--borda);
+}
+
+.logo-icon {
+    width: 48px;
+    height: 48px;
+
+    border-radius: 50%;
+
+    background: var(--verde);
+    color: var(--branco);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 25px;
+    flex-shrink: 0;
+}
+
+.sidebar-logo h2 {
+    font-size: 19px;
+    font-weight: 700;
+
+    color: var(--escuro);
+
+    margin-bottom: 3px;
+}
+
+.sidebar-logo span {
+    display: block;
+
+    color: #22a652;
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   MENU
+========================================================= */
+
+.menu {
+    padding: 22px 12px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.menu-title {
+    color: var(--cinza-claro);
+
+    font-size: 10px;
+    font-weight: bold;
+
+    padding: 0 12px;
+    margin-bottom: 8px;
+
+    letter-spacing: 1px;
+}
+
+.menu-item {
+    min-height: 42px;
+
+    padding: 0 13px;
+
+    border-radius: 7px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 11px;
+
+    color: var(--cinza);
+
+    font-size: 13px;
+
+    transition: 0.2s ease;
+}
+
+.menu-item span {
+    width: 20px;
+
+    display: flex;
+    justify-content: center;
+
+    font-size: 16px;
+}
+
+.menu-item:hover {
+    background: var(--fundo);
+    color: var(--escuro);
+}
+
+.menu-item.active {
+    background: var(--verde);
+    color: var(--branco);
+
+    font-weight: bold;
+
+    box-shadow:
+        0 3px 8px rgba(34, 166, 82, 0.25);
+}
+
+.sidebar-bottom {
+    margin-top: auto;
+
+    padding: 15px 12px 20px;
+
+    border-top: 1px solid var(--borda);
+}
+
+.sidebar-bottom .menu-item:hover {
+    background: var(--vermelho-bg);
+    color: var(--vermelho);
+}
+
+
+/* =========================================================
+   CONTEÚDO PRINCIPAL
+========================================================= */
+
+.main-content {
+    width: calc(100% - 245px);
+
+    margin-left: 245px;
+
+    min-height: 100vh;
+
+    padding: 25px 30px;
+}
+
+
+/* =========================================================
+   TOPBAR
+========================================================= */
+
+.topbar {
+    min-height: 65px;
+
+    background: var(--branco);
+
+    border-radius: 10px;
+
+    padding: 14px 20px;
+
+    margin-bottom: 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    box-shadow: var(--sombra);
+
+    border: 1px solid var(--borda);
+}
+
+.topbar h1 {
+    font-size: 25px;
+
+    color: var(--escuro);
+
+    margin-bottom: 5px;
+}
+
+.topbar p {
+    font-size: 12px;
+
+    color: var(--cinza);
+}
+
+
+/* =========================================================
+   USUÁRIO
+========================================================= */
+
+.user {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    color: inherit;
+
+    cursor: pointer;
+
+    padding: 6px 8px;
+
+    border-radius: 8px;
+
+    transition: 0.2s;
+}
+
+.user:hover {
+    background: var(--fundo);
+}
+
+.user strong {
+    display: block;
+
+    font-size: 13px;
+
+    color: var(--escuro);
+
+    text-align: right;
+}
+
+.user small {
+    display: block;
+
+    font-size: 10px;
+
+    color: var(--cinza);
+
+    text-align: right;
+
+    margin-top: 3px;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+
+    background: var(--verde-bg);
+    color: var(--verde);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 15px;
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   CARDS PRINCIPAIS
+========================================================= */
+
+.cards {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 18px;
+
+    margin-bottom: 20px;
+}
+
+.card {
+    background: var(--branco);
+
+    border: 1px solid var(--borda);
+
+    border-radius: 10px;
+
+    padding: 20px;
+
+    min-height: 145px;
+
+    box-shadow: var(--sombra);
+
+    position: relative;
+
+    transition: 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 7px 22px rgba(31, 41, 55, 0.08);
+}
+
+.card-icon {
+    width: 42px;
+    height: 42px;
+
+    border-radius: 9px;
+
+    background: var(--verde-bg);
+    color: var(--verde);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 20px;
+
+    margin-bottom: 13px;
+}
+
+.card:nth-child(2) .card-icon {
+    background: var(--azul-bg);
+    color: var(--azul);
+}
+
+.card:nth-child(3) .card-icon {
+    background: var(--amarelo-bg);
+    color: var(--amarelo);
+}
+
+.card:nth-child(4) .card-icon {
+    background: var(--teal-bg);
+    color: var(--teal);
+}
+
+.card p {
+    color: var(--cinza);
+
+    font-size: 12px;
+
+    margin-bottom: 5px;
+}
+
+.card h2 {
+    color: var(--escuro);
+
+    font-size: 25px;
+
+    margin-bottom: 5px;
+}
+
+.card small {
+    color: var(--cinza-claro);
+
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   GRIDS E PAINÉIS
+========================================================= */
+
+.content-grid {
+    display: grid;
+
+    grid-template-columns: 2fr 1fr;
+
+    gap: 18px;
+
+    margin-bottom: 20px;
+}
+
+.panel {
+    background: var(--branco);
+
+    border: 1px solid var(--borda);
+
+    border-radius: 10px;
+
+    padding: 20px;
+
+    box-shadow: var(--sombra);
+
+    min-height: 250px;
+}
+
+.panel h2 {
+    color: var(--escuro);
+
+    font-size: 16px;
+
+    margin-bottom: 5px;
+}
+
+.panel > p {
+    color: var(--cinza);
+
+    font-size: 11px;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   GRÁFICO
+========================================================= */
+
+.chart {
+    height: 170px;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    gap: 18px;
+
+    padding: 10px 15px 0;
+
+    border-bottom: 1px solid var(--borda);
+}
+
+.bar {
+    flex: 1;
+
+    max-width: 45px;
+
+    min-height: 10px;
+
+    background: var(--verde);
+
+    border-radius: 5px 5px 0 0;
+
+    transition: 0.3s ease;
+}
+
+.bar:hover {
+    background: var(--verde-claro);
+
+    transform: scaleY(1.03);
+}
+
+
+/* =========================================================
+   STATUS DAS MÁQUINAS
+   VISUAL MODERNO
+========================================================= */
+
+.status {
+    min-height: 82px;
+
+    padding: 12px 20px;
+
+    margin-bottom: 14px;
+
+    border-radius: 14px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+
+    font-size: 0;
+
+    border: 1px solid transparent;
+
+    position: relative;
+
+    overflow: hidden;
+
+    transition: all 0.25s ease;
+}
+
+
+/* Efeito ao passar o mouse */
+
+.status:hover {
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   CÍRCULO DO ÍCONE
+========================================================= */
+
+.status::before {
+    width: 48px;
+    height: 48px;
+
+    min-width: 48px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 23px;
+
+    font-weight: bold;
+
+    box-shadow:
+        0 5px 12px rgba(0, 0, 0, 0.10);
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* =========================================================
+   TEXTO DO STATUS
+========================================================= */
+
+.status span {
+    display: flex;
+
+    align-items: baseline;
+
+    gap: 8px;
+
+    font-size: 17px;
+
+    font-weight: 600;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* Número */
+
+.status strong {
+    font-size: 28px;
+
+    font-weight: 800;
+
+    line-height: 1;
+}
+
+
+/* =========================================================
+   FUNCIONANDO
+========================================================= */
+
+.status.green {
+    background: linear-gradient(
+        135deg,
+        #e9f8ef 0%,
+        #dff5e8 100%
+    );
+
+    border-color: #ccebd8;
+
+    color: var(--verde);
+
+    box-shadow:
+        0 5px 15px rgba(34, 166, 82, 0.08);
+}
+
+.status.green::before {
+    content: "✓";
+
+    background: var(--verde);
+
+    color: white;
+}
+
+
+/* =========================================================
+   EM MANUTENÇÃO
+========================================================= */
+
+.status.yellow {
+    background: linear-gradient(
+        135deg,
+        #fffbe0 0%,
+        #fff6b8 100%
+    );
+
+    border-color: #f5e6a0;
+
+    color: #d99b00;
+
+    box-shadow:
+        0 5px 15px rgba(234, 179, 8, 0.08);
+}
+
+.status.yellow::before {
+    content: "⚒";
+
+    background: #eab308;
+
+    color: white;
+
+    font-size: 21px;
+}
+
+
+/* =========================================================
+   PARADA
+========================================================= */
+
+.status.red {
+    background: linear-gradient(
+        135deg,
+        #ffebeb 0%,
+        #ffe0e0 100%
+    );
+
+    border-color: #f7cccc;
+
+    color: #e63946;
+
+    box-shadow:
+        0 5px 15px rgba(239, 68, 68, 0.08);
+}
+
+.status.red::before {
+    content: "Ⅱ";
+
+    background: #ef4444;
+
+    color: white;
+
+    font-size: 20px;
+}
+
+
+/* =========================================================
+   DETALHE DECORATIVO
+========================================================= */
+
+.status::after {
+    content: "";
+
+    position: absolute;
+
+    width: 130px;
+    height: 130px;
+
+    right: -65px;
+    bottom: -70px;
+
+    border-radius: 50%;
+
+    opacity: 0.35;
+
+    pointer-events: none;
+}
+
+.status.green::after {
+    background: #b9e8ca;
+}
+
+.status.yellow::after {
+    background: #f7e78d;
+}
+
+.status.red::after {
+    background: #f5bcbc;
+}
+
+
+/* =========================================================
+   INDICADORES
+========================================================= */
+
+.indicator {
+    margin-bottom: 22px;
+}
+
+.indicator:last-child {
+    margin-bottom: 0;
+}
+
+.indicator > div:first-child {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 8px;
+}
+
+.indicator span {
+    color: var(--escuro);
+
+    font-size: 12px;
+}
+
+.indicator strong {
+    color: var(--verde);
+
+    font-size: 13px;
+}
+
+.progress {
+    width: 100%;
+
+    height: 8px;
+
+    background: var(--fundo);
+
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+.progress div {
+    height: 100%;
+
+    background: var(--verde);
+
+    border-radius: 10px;
+
+    transition: width 0.5s ease;
+}
+
+
+/* =========================================================
+   ATIVIDADES
+========================================================= */
+
+.activity {
+    min-height: 45px;
+
+    padding: 12px 10px;
+
+    border-bottom: 1px solid var(--borda);
+
+    color: var(--escuro);
+
+    font-size: 12px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+}
+
+.activity::before {
+    content: "✓";
+
+    width: 24px;
+    height: 24px;
+
+    border-radius: 50%;
+
+    background: var(--verde-bg);
+
+    color: var(--verde);
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-weight: bold;
+}
+
+.activity:last-child {
+    border-bottom: none;
+}
+
+
+/* =========================================================
+   ACESSO RÁPIDO
+========================================================= */
+
+.quick-panel {
+    min-height: auto;
+
+    margin-bottom: 20px;
+}
+
+.quick-panel h2 {
+    color: var(--escuro);
+
+    font-size: 16px;
+
+    margin-bottom: 5px;
+}
+
+.quick-panel > p {
+    color: var(--cinza);
+
+    font-size: 11px;
+
+    margin-bottom: 18px;
+}
+
+.quick-actions {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 14px;
+
+    width: 100%;
+}
+
+.quick-button {
+    min-height: 90px;
+
+    border-radius: 10px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+
+    font-size: 11px;
+
+    font-weight: 500;
+
+    text-decoration: none;
+
+    border: 1px solid var(--borda);
+
+    background: var(--branco);
+
+    color: var(--escuro);
+
+    box-shadow:
+        0 1px 4px rgba(0, 0, 0, 0.03);
+
+    transition: 0.2s ease;
+}
+
+.quick-button span {
+    font-size: 20px;
+}
+
+.quick-button:hover {
+    background: var(--verde-bg);
+
+    border-color: var(--verde);
+
+    color: var(--verde);
+
+    transform: translateY(-3px);
+}
+
+.quick-button:nth-child(1) span {
+    color: var(--verde);
+}
+
+.quick-button:nth-child(2) span {
+    color: var(--azul);
+}
+
+.quick-button:nth-child(3) span {
+    color: var(--amarelo);
+}
+
+.quick-button:nth-child(4) span {
+    color: var(--vermelho);
+}
+
+
+/* =========================================================
+   RESPONSIVO - TABLET
+========================================================= */
+
+@media (max-width: 1024px) {
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVO - CELULAR
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .sidebar {
+        width: 80px;
+    }
+
+    .sidebar-logo h2,
+    .sidebar-logo span,
+    .menu-title,
+    .menu-item span:last-child {
+        display: none;
+    }
+
+    .sidebar-logo {
+        justify-content: center;
+
+        padding: 20px 0;
+    }
+
+    .menu-item {
+        padding: 0;
+
+        justify-content: center;
+    }
+
+    .menu-item span:first-child {
+        width: auto;
+
+        font-size: 20px;
+    }
+
+    .main-content {
+        width: calc(100% - 80px);
+
+        margin-left: 80px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .user strong,
+    .user small {
+        display: none;
+    }
+
+    .topbar {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+
+        position: relative;
+    }
+
+    .user {
+        position: absolute;
+
+        right: 20px;
+        top: 14px;
+    }
+
+    .quick-actions {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVO - STATUS
+========================================================= */
+
+@media (max-width: 500px) {
+
+    .status {
+        min-height: 75px;
+
+        padding: 10px 15px;
+
+        gap: 14px;
+    }
+
+    .status::before {
+        width: 42px;
+        height: 42px;
+
+        min-width: 42px;
+
+        font-size: 20px;
+    }
+
+    .status span {
+        font-size: 15px;
+    }
+
+    .status strong {
+        font-size: 24px;
+    }
+
+}

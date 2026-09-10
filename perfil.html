@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>EcoFactory - Meu Perfil</title>
+
+    <link rel="stylesheet" href="perfil.css">
+
+</head>
+
+<body>
+
+<div class="dashboard-page">
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside class="sidebar">
+
+
+        <!-- LOGO -->
+
+        <div class="sidebar-logo">
+
+            <div class="logo-icon">
+                ♻
+            </div>
+
+            <div>
+
+                <h2>
+                    EcoFactory
+                </h2>
+
+                <span>
+                    Indústria Inteligente
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             MENU
+        ================================================== -->
+
+        <nav class="menu">
+
+            <p class="menu-title">
+                MENU
+            </p>
+
+
+            <!-- DASHBOARD -->
+
+            <a href="dashboard.html"
+               class="menu-item">
+
+                <span>▣</span>
+
+                Dashboard
+
+            </a>
+
+
+            <!-- MÁQUINAS -->
+
+            <a href="maquinas.html"
+               class="menu-item">
+
+                <span>⚙</span>
+
+                Máquinas
+
+            </a>
+
+
+            <!-- PRODUÇÃO -->
+
+            <a href="producao.html"
+               class="menu-item">
+
+                <span>▤</span>
+
+                Produção
+
+            </a>
+
+
+            <!-- ENERGIA E ÁGUA -->
+
+            <a href="consumo.html"
+               class="menu-item">
+
+                <span>◉</span>
+
+                Energia & Água
+
+            </a>
+
+
+            <!-- OCORRÊNCIAS -->
+
+            <a href="ocorrencias.html"
+               class="menu-item">
+
+                <span>⚠</span>
+
+                Ocorrências
+
+            </a>
+
+
+            <!-- INDICADORES -->
+
+            <a href="indicadores.html"
+               class="menu-item">
+
+                <span>♻</span>
+
+                Indicadores
+
+            </a>
+
+
+            <!-- CONFIGURAÇÕES -->
+
+            <a href="configuracoes.html"
+               class="menu-item">
+
+                <span>⚙</span>
+
+                Configurações
+
+            </a>
+
+        </nav>
+
+
+        <!-- =================================================
+             SAIR
+        ================================================== -->
+
+        <div class="sidebar-bottom">
+
+            <a href="#"
+               id="logout"
+               class="menu-item logout">
+
+                <span>↪</span>
+
+                Sair
+
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =====================================================
+         CONTEÚDO PRINCIPAL
+    ====================================================== -->
+
+    <main class="main-content">
+
+
+        <!-- =================================================
+             TOPBAR
+        ================================================== -->
+
+        <header class="topbar">
+
+            <div>
+
+                <h1>
+                    Meu Perfil
+                </h1>
+
+                <p>
+                    Visualize suas informações
+                </p>
+
+            </div>
+
+
+            <!-- USUÁRIO -->
+
+            <a href="perfil.html"
+               class="user"
+               id="userProfile"
+               title="Meu perfil">
+
+                <div>
+
+                    <strong id="topUserName">
+                        Usuário
+                    </strong>
+
+                    <small>
+                        Meu perfil
+                    </small>
+
+                </div>
+
+
+                <div class="user-avatar"
+                     id="topUserAvatar">
+
+                    U
+
+                </div>
+
+            </a>
+
+        </header>
+
+
+        <!-- =================================================
+             CABEÇALHO DO PERFIL
+        ================================================== -->
+
+        <section class="profile-header">
+
+            <div class="profile-avatar"
+                 id="profileAvatar">
+
+                U
+
+            </div>
+
+
+            <div class="profile-title">
+
+                <h2 id="profileName">
+                    Usuário
+                </h2>
+
+                <p id="profileEmail">
+                    usuario@email.com
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             INFORMAÇÕES
+        ================================================== -->
+
+        <section class="profile-grid">
+
+
+            <!-- =================================================
+                 DADOS DA CONTA
+            ================================================== -->
+
+            <div class="profile-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h2>
+                            Informações da conta
+                        </h2>
+
+                        <p>
+                            Dados cadastrados no EcoFactory
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- NOME -->
+
+                <div class="profile-info">
+
+                    <span>
+                        Nome completo
+                    </span>
+
+                    <strong id="infoNome">
+                        Usuário
+                    </strong>
+
+                </div>
+
+
+                <!-- EMAIL -->
+
+                <div class="profile-info">
+
+                    <span>
+                        E-mail
+                    </span>
+
+                    <strong id="infoEmail">
+                        usuario@email.com
+                    </strong>
+
+                </div>
+
+
+                <!-- TIPO -->
+
+                <div class="profile-info">
+
+                    <span>
+                        Tipo de conta
+                    </span>
+
+                    <strong id="infoTipo">
+                        Usuário do sistema
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 STATUS DA CONTA
+            ================================================== -->
+
+            <div class="profile-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h2>
+                            Status da conta
+                        </h2>
+
+                        <p>
+                            Situação atual do seu acesso
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="account-status">
+
+                    <div class="status-icon">
+                        ✓
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Conta ativa
+                        </strong>
+
+                        <p>
+                            Seu acesso ao sistema está ativo.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             AÇÕES
+        ================================================== -->
+
+        <section class="profile-card actions-card">
+
+            <h2>
+                Ações
+            </h2>
+
+            <p>
+                Gerencie seu acesso ao sistema.
+            </p>
+
+
+            <div class="profile-actions">
+
+
+                <!-- VOLTAR -->
+
+                <a href="dashboard.html"
+                   class="action-button">
+
+                    ← Voltar ao Dashboard
+
+                </a>
+
+
+                <!-- SAIR -->
+
+                <button
+                    type="button"
+                    id="logoutButton"
+                    class="logout-button">
+
+                    Sair da conta
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             FOOTER
+        ================================================== -->
+
+        <footer>
+
+            © 2026 EcoFactory.
+            Todos os direitos reservados.
+
+        </footer>
+
+    </main>
+
+</div>
+
+
+<!-- =====================================================
+     JAVASCRIPT
+====================================================== -->
+
+<script src="perfil.js"></script>
+
+</body>
+
+</html>

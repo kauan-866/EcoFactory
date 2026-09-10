@@ -1,0 +1,825 @@
+
+:root{
+ --primary:#22A652;
+ --primary-dark:#1b8a44;
+ --bg:#f6f8fb;
+ --card:#ffffff;
+ --text:#1f2937;
+ --muted:#6b7280;
+ --border:#e5e7eb;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Inter,Arial,sans-serif;background:var(--bg);color:var(--text)}
+.sidebar{
+position:fixed;left:0;top:0;width:280px;height:100vh;
+background:#fff;border-right:1px solid var(--border);
+}
+.main-content{margin-left:280px;padding:24px}
+.topbar,.header{
+background:#fff;border:1px solid var(--border);
+border-radius:16px;padding:18px 24px;margin-bottom:24px;
+}
+.card,.stat-card,.chart-card,.table-card{
+background:#fff;border:1px solid var(--border);
+border-radius:18px;box-shadow:0 2px 10px rgba(0,0,0,.04);
+}
+button,.btn{
+background:var(--primary);color:#fff;border:none;
+border-radius:12px;padding:10px 18px;
+}
+table{background:#fff;border-radius:16px;overflow:hidden}
+input,select,textarea{
+border:1px solid var(--border);border-radius:12px;padding:12px;
+}
+
+
+/* Original preserved below */
+
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   BODY
+===================================================== */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f7f6;
+    color: #1d2923;
+}
+
+
+/* =====================================================
+   PÁGINA PRINCIPAL
+===================================================== */
+
+.cadastro-page {
+    min-height: 100vh;
+    width: 100%;
+
+    display: flex;
+}
+
+
+/* =====================================================
+   IMAGEM LATERAL
+===================================================== */
+
+.cadastro-image {
+    width: 45%;
+    min-height: 100vh;
+
+    background-image:
+        linear-gradient(
+            rgba(9, 235, 122, 0.479),
+            rgba(13, 88, 49, 0.7)
+        ),
+        url();
+
+    background-size: cover;
+    background-position: center;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* =====================================================
+   CONTEÚDO SOBRE A IMAGEM
+===================================================== */
+
+.image-overlay {
+    position: absolute;
+
+    left: 60px;
+    bottom: 80px;
+
+    color: white;
+
+    max-width: 380px;
+}
+
+
+/* =====================================================
+   ÍCONE ECO
+===================================================== */
+
+.eco-symbol {
+    width: 85px;
+    height: 85px;
+
+    border-radius: 50%;
+
+    background: #20a447;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 48px;
+
+    margin-bottom: 20px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.20);
+}
+
+
+/* =====================================================
+   TÍTULO DA IMAGEM
+===================================================== */
+
+.image-overlay h1 {
+    font-size: 42px;
+
+    margin-bottom: 5px;
+
+    font-weight: 700;
+}
+
+.image-overlay p {
+    font-size: 18px;
+
+    margin-bottom: 0;
+}
+
+
+/* =====================================================
+   SLOGAN
+===================================================== */
+
+.slogan {
+    max-width: 320px;
+
+    margin-top: 25px;
+
+    line-height: 1.5;
+
+    font-size: 15px;
+
+    opacity: 0.9;
+}
+
+
+/* =====================================================
+   ÁREA DO CADASTRO
+===================================================== */
+
+.cadastro-container {
+    width: 55%;
+    min-height: 100vh;
+
+    background: #ffffff;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 40px 30px;
+
+    overflow-y: auto;
+}
+
+
+/* =====================================================
+   CAIXA DO CADASTRO
+===================================================== */
+
+.cadastro-box {
+    width: 430px;
+
+    max-width: 100%;
+
+    animation: aparecer 0.5s ease;
+}
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.cadastro-logo {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 30px;
+}
+
+
+/* =====================================================
+   ÍCONE DA LOGO
+===================================================== */
+
+.logo-icon {
+    width: 52px;
+    height: 52px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #e9f8ed;
+
+    color: #20a447;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 28px;
+}
+
+
+/* =====================================================
+   TEXTO DA LOGO
+===================================================== */
+
+.cadastro-logo h2 {
+    color: #168a3c;
+
+    font-size: 24px;
+
+    margin-bottom: 2px;
+}
+
+.cadastro-logo span {
+    color: #777;
+
+    font-size: 12px;
+}
+
+
+/* =====================================================
+   TÍTULO
+===================================================== */
+
+.cadastro-title {
+    margin-bottom: 25px;
+}
+
+.cadastro-title h1 {
+    font-size: 28px;
+
+    color: #1d2923;
+
+    margin-bottom: 6px;
+}
+
+.cadastro-title p {
+    color: #777;
+
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   GRUPO DOS INPUTS
+===================================================== */
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+
+/* =====================================================
+   LABEL
+===================================================== */
+
+.input-group label {
+    display: block;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    color: #303832;
+
+    margin-bottom: 7px;
+}
+
+
+/* =====================================================
+   INPUT
+===================================================== */
+
+.input-group input {
+    width: 100%;
+
+    height: 45px;
+
+    border: 1px solid #d8ddd9;
+
+    border-radius: 7px;
+
+    padding: 0 13px;
+
+    background: #ffffff;
+
+    color: #222;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s,
+        box-shadow 0.2s,
+        background 0.2s;
+}
+
+
+/* =====================================================
+   PLACEHOLDER
+===================================================== */
+
+.input-group input::placeholder {
+    color: #aaa;
+}
+
+
+/* =====================================================
+   INPUT FOCADO
+===================================================== */
+
+.input-group input:focus {
+    border-color: #20a447;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(32, 164, 71, 0.10);
+
+    background: #ffffff;
+}
+
+
+/* =====================================================
+   INPUT INVÁLIDO
+===================================================== */
+
+.input-group input:invalid:not(:placeholder-shown) {
+    border-color: #d93025;
+}
+
+
+/* =====================================================
+   ÁREA DA SENHA
+===================================================== */
+
+.password-input {
+    position: relative;
+
+    width: 100%;
+}
+
+
+/* =====================================================
+   INPUT DA SENHA
+===================================================== */
+
+.password-input input {
+    padding-right: 52px;
+}
+
+
+/* =====================================================
+   BOTÃO OLHO
+===================================================== */
+
+.eye-button {
+    position: absolute;
+
+    right: 8px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 35px;
+    height: 35px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: transparent;
+
+    color: #666;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 16px;
+
+    transition:
+        background 0.2s,
+        color 0.2s;
+}
+
+
+/* =====================================================
+   HOVER OLHO
+===================================================== */
+
+.eye-button:hover {
+    background: #f0f4f1;
+
+    color: #168a3c;
+}
+
+
+/* =====================================================
+   TERMOS
+===================================================== */
+
+.terms {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 8px;
+
+    margin: 18px 0;
+
+    color: #666;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+
+    cursor: pointer;
+}
+
+
+/* =====================================================
+   CHECKBOX
+===================================================== */
+
+.terms input {
+    width: 15px;
+    height: 15px;
+
+    margin-top: 3px;
+
+    flex-shrink: 0;
+
+    accent-color: #20a447;
+
+    cursor: pointer;
+}
+
+
+/* =====================================================
+   LINKS DOS TERMOS
+===================================================== */
+
+.terms a {
+    color: #168a3c;
+
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+.terms a:hover {
+    text-decoration: underline;
+}
+
+
+/* =====================================================
+   BOTÃO CRIAR CONTA
+===================================================== */
+
+.cadastro-button {
+    width: 100%;
+
+    height: 47px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: #20a447;
+
+    color: #ffffff;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s,
+        transform 0.2s,
+        box-shadow 0.2s;
+}
+
+
+/* =====================================================
+   HOVER BOTÃO
+===================================================== */
+
+.cadastro-button:hover {
+    background: #168a3c;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 5px 15px
+        rgba(32, 164, 71, 0.20);
+}
+
+
+/* =====================================================
+   BOTÃO PRESSIONADO
+===================================================== */
+
+.cadastro-button:active {
+    transform: translateY(0);
+
+    box-shadow: none;
+}
+
+
+/* =====================================================
+   MENSAGEM
+===================================================== */
+
+.mensagem {
+    text-align: center;
+
+    margin-top: 12px;
+
+    min-height: 18px;
+
+    font-size: 13px;
+
+    line-height: 1.4;
+}
+
+
+/* =====================================================
+   LINK PARA LOGIN
+===================================================== */
+
+.login-link {
+    text-align: center;
+
+    margin-top: 20px;
+
+    font-size: 13px;
+
+    color: #777;
+}
+
+
+/* =====================================================
+   LINK ENTRAR
+===================================================== */
+
+.login-link a {
+    color: #168a3c;
+
+    font-weight: bold;
+
+    text-decoration: none;
+
+    margin-left: 5px;
+
+    transition: color 0.2s;
+}
+
+.login-link a:hover {
+    color: #20a447;
+
+    text-decoration: underline;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.cadastro-footer {
+    text-align: center;
+
+    color: #999;
+
+    font-size: 10px;
+
+    margin-top: 25px;
+
+    line-height: 1.5;
+}
+
+
+/* =====================================================
+   ANIMAÇÃO
+===================================================== */
+
+@keyframes aparecer {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1000px) {
+
+    .cadastro-image {
+        width: 40%;
+    }
+
+    .cadastro-container {
+        width: 60%;
+    }
+
+    .image-overlay {
+        left: 35px;
+        bottom: 60px;
+    }
+
+    .image-overlay h1 {
+        font-size: 35px;
+    }
+
+    .eco-symbol {
+        width: 70px;
+        height: 70px;
+
+        font-size: 38px;
+    }
+
+}
+
+
+/* =====================================================
+   CELULAR / TELA PEQUENA
+===================================================== */
+
+@media (max-width: 800px) {
+
+    .cadastro-page {
+        display: block;
+    }
+
+
+    /* Esconde imagem */
+
+    .cadastro-image {
+        display: none;
+    }
+
+
+    /* Cadastro ocupa tudo */
+
+    .cadastro-container {
+        width: 100%;
+
+        min-height: 100vh;
+
+        padding: 35px 20px;
+    }
+
+
+    .cadastro-box {
+        width: 430px;
+
+        max-width: 100%;
+    }
+
+}
+
+
+/* =====================================================
+   CELULAR PEQUENO
+===================================================== */
+
+@media (max-width: 450px) {
+
+    .cadastro-container {
+        padding: 25px 15px;
+    }
+
+
+    .cadastro-logo {
+        margin-bottom: 25px;
+    }
+
+
+    .logo-icon {
+        width: 46px;
+        height: 46px;
+
+        font-size: 24px;
+    }
+
+
+    .cadastro-logo h2 {
+        font-size: 21px;
+    }
+
+
+    .cadastro-logo span {
+        font-size: 11px;
+    }
+
+
+    .cadastro-title h1 {
+        font-size: 24px;
+    }
+
+
+    .cadastro-title p {
+        font-size: 13px;
+    }
+
+
+    .input-group label {
+        font-size: 13px;
+    }
+
+
+    .input-group input {
+        height: 44px;
+
+        font-size: 13px;
+    }
+
+
+    .terms {
+        font-size: 11px;
+    }
+
+
+    .cadastro-button {
+        height: 46px;
+
+        font-size: 14px;
+    }
+
+
+    .login-link {
+        font-size: 12px;
+    }
+
+
+    .cadastro-footer {
+        font-size: 9px;
+    }
+
+}
+
+
+/* =====================================================
+   TELA MUITO PEQUENA
+===================================================== */
+
+@media (max-width: 350px) {
+
+    .cadastro-container {
+        padding: 20px 12px;
+    }
+
+
+    .cadastro-title h1 {
+        font-size: 22px;
+    }
+
+
+    .terms {
+        font-size: 10px;
+    }
+
+}

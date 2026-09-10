@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>EcoFactory - Máquinas</title>
+
+    <link rel="stylesheet" href="maquinas.css">
+
+</head>
+
+<body>
+
+<div class="dashboard-page">
+
+    <!-- =========================
+         SIDEBAR
+    ========================== -->
+
+    <aside class="sidebar">
+
+        <!-- LOGO -->
+
+        <div class="sidebar-logo">
+
+            <div class="logo-icon">
+                ♻
+            </div>
+
+            <div>
+
+                <h2>EcoFactory</h2>
+
+                <span>
+                    Indústria Inteligente
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- MENU -->
+
+        <nav class="menu">
+
+            <p class="menu-title">
+               
+            </p>
+
+
+            <a
+                href="dashboard.html"
+                class="menu-item"
+            >
+                <span>▣</span>
+                <span>Dashboard</span>
+            </a>
+
+
+            <a
+                href="maquinas.html"
+                class="menu-item active"
+            >
+                <span>⚙</span>
+                <span>Máquinas</span>
+            </a>
+
+
+            <a
+                href="producao.html"
+                class="menu-item"
+            >
+                <span>▤</span>
+                <span>Produção</span>
+            </a>
+
+
+            <a
+                href="#"
+                class="menu-item"
+                id="energiaMenu"
+            >
+                <span>◉</span>
+                            
+                <span> Energia      </span>...     &  Água
+            </a>
+
+
+            <a
+                href="#"
+                class="menu-item"
+                id="ocorrenciasMenu"
+            >
+                <span>⚠</span>
+                <span>Ocorrências</span>
+            </a>
+
+
+            <a
+                href="#"
+                class="menu-item"
+                id="indicadoresMenu"
+            >
+                <span>♻</span>
+                <span>Indicadores</span>
+            </a>
+
+
+            <a
+                href="#"
+                class="menu-item"
+                id="configuracoesMenu"
+            >
+                <span>⚙</span>
+                <span>Configurações</span>
+            </a>
+
+        </nav>
+
+
+        <!-- SAIR -->
+
+        <div class="sidebar-bottom">
+
+            <a
+                href="#"
+                id="logout"
+                class="menu-item logout"
+            >
+
+                <span>↪</span>
+
+                <span>Sair</span>
+
+            </a>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =========================
+         CONTEÚDO PRINCIPAL
+    ========================== -->
+
+    <main class="main-content">
+
+
+        <!-- =========================
+             TOPBAR
+        ========================== -->
+
+        <header class="topbar">
+
+            <div>
+
+                <h1>
+                    Máquinas
+                </h1>
+
+                <p>
+                    Início / Máquinas
+                </p>
+
+            </div>
+
+
+            <!-- USUÁRIO -->
+
+            <div class="user">
+
+                <div>
+
+                    <strong id="nomeUsuario">
+                        Olá, Usuário
+                    </strong>
+
+                    <small>
+                        Administrador
+                    </small>
+
+                </div>
+
+
+                <div
+                    class="user-avatar"
+                    id="userAvatar"
+                >
+                    U
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =========================
+             DATA
+        ========================== -->
+
+        <div class="data-atual">
+
+            <span>
+                📅
+            </span>
+
+            <span id="dataAtual">
+               Cadastre sua maquina aqui!
+            </span>
+
+        </div>
+
+
+
+        <!-- =========================
+             CABEÇALHO
+        ========================== -->
+
+        <section class="page-header">
+
+            <div>
+
+                <h2>
+                    Lista de Máquinas
+                </h2>
+
+                <p>
+                    Consulte e gerencie as máquinas cadastradas.
+                </p>
+
+            </div>
+
+
+            <button
+                type="button"
+                class="new-machine-button"
+                id="novaMaquina"
+            >
+
+                <span>+</span>
+
+                Nova Máquina
+
+            </button>
+
+        </section>
+
+
+
+        <!-- =========================
+             FILTROS
+        ========================== -->
+
+        <section class="filters">
+
+
+            <!-- BUSCA -->
+
+            <div class="search-box">
+
+                <span>
+                    🔎
+                </span>
+
+                <input
+                    type="search"
+                    id="buscarMaquina"
+                    placeholder="Buscar máquina..."
+                    autocomplete="off"
+                >
+
+            </div>
+
+
+
+            <!-- STATUS -->
+
+            <select id="filtroStatus">
+
+                <option value="todos">
+                    Todos os status
+                </option>
+
+                <option value="Ativo">
+                    Ativo
+                </option>
+
+                <option value="Manutenção">
+                    Manutenção
+                </option>
+
+                <option value="Parada">
+                    Parada
+                </option>
+
+            </select>
+
+
+
+            <!-- TIPO -->
+
+            <select id="filtroTipo">
+
+                <option value="todos">
+                    Todos os tipos
+                </option>
+
+                <option value="Prensa">
+                    Prensa
+                </option>
+
+                <option value="Usinagem">
+                    Usinagem
+                </option>
+
+                <option value="Transporte">
+                    Transporte
+                </option>
+
+                <option value="Térmico">
+                    Térmico
+                </option>
+
+                <option value="Soldagem">
+                    Soldagem
+                </option>
+
+            </select>
+
+
+
+            <!-- LIMPAR -->
+
+            <button
+                type="button"
+                class="filter-button"
+                id="limparFiltros"
+            >
+                Limpar
+            </button>
+
+        </section>
+
+
+
+        <!-- =========================
+             TABELA
+        ========================== -->
+
+        <section class="table-panel">
+
+
+            <!-- CABEÇALHO DA TABELA -->
+
+            <div class="table-header">
+
+                <div>
+
+                    <h2>
+                        Máquinas cadastradas
+                    </h2>
+
+                    <p>
+                        Equipamentos registrados no sistema
+                    </p>
+
+                </div>
+
+
+                <span id="contador">
+                    0 máquinas
+                </span>
+
+            </div>
+
+
+
+            <!-- TABELA -->
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                ID
+                            </th>
+
+                            <th>
+                                Nome
+                            </th>
+
+                            <th>
+                                Tipo
+                            </th>
+
+                            <th>
+                                Status
+                            </th>
+
+                            <th>
+                                Localização
+                            </th>
+
+                            <th>
+                                Ações
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="tabelaMaquinas">
+
+                        <!--
+                            O JavaScript
+                            preencherá aqui.
+                        -->
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+
+            <!-- =========================
+                 PAGINAÇÃO
+            ========================== -->
+
+            <div class="pagination">
+
+                <button
+                    type="button"
+                    id="anterior"
+                >
+                    ← Anterior
+                </button>
+
+
+                <div
+                    id="paginas"
+                    class="pagina-numeros"
+                >
+                    <!-- JavaScript -->
+                </div>
+
+
+                <button
+                    type="button"
+                    id="proximo"
+                >
+                    Próximo →
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             RESUMO
+        ========================== -->
+
+        <section class="machine-summary">
+
+
+            <div class="summary-card">
+
+                <span>
+                    ⚙️
+                </span>
+
+                <div>
+
+                    <small>
+                        Total
+                    </small>
+
+                    <strong id="totalMaquinas">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="summary-card">
+
+                <span>
+                    🟢
+                </span>
+
+                <div>
+
+                    <small>
+                        Ativas
+                    </small>
+
+                    <strong id="totalAtivas">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="summary-card">
+
+                <span>
+                    🟡
+                </span>
+
+                <div>
+
+                    <small>
+                        Manutenção
+                    </small>
+
+                    <strong id="totalManutencao">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="summary-card">
+
+                <span>
+                    🔴
+                </span>
+
+                <div>
+
+                    <small>
+                        Paradas
+                    </small>
+
+                    <strong id="totalParadas">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             FOOTER
+        ========================== -->
+
+        <footer>
+
+            © 2026 EcoFactory.
+            Todos os direitos reservados.
+
+        </footer>
+
+    </main>
+
+</div>
+
+
+
+<!-- ==================================================
+     MODAL - NOVA MÁQUINA
+================================================== -->
+
+<div
+    class="modal"
+    id="modalMaquina"
+    aria-hidden="true"
+>
+
+    <div
+        class="modal-box"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="tituloModal"
+    >
+
+
+        <!-- FECHAR -->
+
+        <button
+            type="button"
+            class="fechar-modal"
+            id="fecharModal"
+            aria-label="Fechar"
+        >
+            ×
+        </button>
+
+
+
+        <!-- TÍTULO -->
+
+        <h2 id="tituloModal">
+            Nova Máquina
+        </h2>
+
+        <p>
+            Cadastre uma nova máquina no sistema.
+        </p>
+
+
+
+        <!-- FORMULÁRIO -->
+
+        <form id="formMaquina">
+
+
+            <!-- NOME -->
+
+            <div class="form-group">
+
+                <label for="nomeMaquina">
+                    Nome da máquina
+                </label>
+
+                <input
+                    type="text"
+                    id="nomeMaquina"
+                    placeholder="Ex: Prensa Hidráulica"
+                    required
+                >
+
+            </div>
+
+
+
+            <!-- TIPO -->
+
+            <div class="form-group">
+
+                <label for="tipoMaquina">
+                    Tipo
+                </label>
+
+                <select
+                    id="tipoMaquina"
+                    required
+                >
+
+                    <option value="">
+                        Selecione
+                    </option>
+
+                    <option value="Prensa">
+                        Prensa
+                    </option>
+
+                    <option value="Usinagem">
+                        Usinagem
+                    </option>
+
+                    <option value="Transporte">
+                        Transporte
+                    </option>
+
+                    <option value="Térmico">
+                        Térmico
+                    </option>
+
+                    <option value="Soldagem">
+                        Soldagem
+                    </option>
+
+                </select>
+
+            </div>
+
+
+
+            <!-- LOCALIZAÇÃO -->
+
+            <div class="form-group">
+
+                <label for="localizacaoMaquina">
+                    Localização
+                </label>
+
+                <input
+                    type="text"
+                    id="localizacaoMaquina"
+                    placeholder="Ex: Setor A"
+                    required
+                >
+
+            </div>
+
+
+
+            <!-- STATUS -->
+
+            <div class="form-group">
+
+                <label for="statusMaquina">
+                    Status
+                </label>
+
+                <select
+                    id="statusMaquina"
+                    required
+                >
+
+                    <option value="Ativo">
+                        Ativo
+                    </option>
+
+                    <option value="Manutenção">
+                        Manutenção
+                    </option>
+
+                    <option value="Parada">
+                        Parada
+                    </option>
+
+                </select>
+
+            </div>
+
+
+
+            <!-- BOTÕES -->
+
+            <div class="modal-actions">
+
+                <button
+                    type="button"
+                    class="cancel-button"
+                    id="cancelarModal"
+                >
+                    Cancelar
+                </button>
+
+
+                <button
+                    type="submit"
+                    class="save-button"
+                >
+                    Salvar Máquina
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+
+<!-- ==================================================
+     JAVASCRIPT
+================================================== -->
+
+<script src="maquinas.js"></script>
+
+</body>
+
+</html>

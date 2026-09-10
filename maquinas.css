@@ -1,0 +1,1582 @@
+:root{ 
+ --primary:#22A652; 
+ --primary-dark:#1b8a44; 
+ --bg:#f6f8fb; 
+ --card:#ffffff; 
+ --text:#1f2937; 
+ --muted:#6b7280; 
+ --border:#e5e7eb; 
+} 
+*{margin:0;padding:0;box-sizing:border-box} 
+body{font-family:Inter,Arial,sans-serif;background:var(--bg);color:var(--text)}
+.sidebar{ 
+position:fixed;left:0;top:0;width:280px;height:100vh; 
+background:#fff;border-right:1px solid var(--border); 
+} 
+.main-content{margin-left:280px;padding:24px} 
+.topbar,.header{ 
+background:#fff;border:1px solid var(--border); 
+border-radius:16px;padding:18px 24px;margin-bottom:24px; 
+} 
+.card,.stat-card,.chart-card,.table-card{ 
+background:#fff;border:1px solid var(--border); 
+border-radius:18px;box-shadow:0 2px 10px rgba(0,0,0,.04); 
+} 
+button,.btn{ 
+background:var(--primary);color:#fff;border:none; 
+border-radius:12px;padding:10px 18px; 
+} 
+table{background:#fff;border-radius:16px;overflow:hidden} 
+input,select,textarea{ 
+border:1px solid var(--border);border-radius:12px;padding:12px; 
+} 
+
+
+/* Original preserved below */ 
+ 
+/* ========================================================= 
+   ECOFACTORY - MÁQUINAS 
+   PADRÃO VISUAL DO SISTEMA 
+========================================================= */ 
+ 
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+} 
+ 
+:root { 
+    --verde: #22a652; 
+    --verde-claro: #66BB6A; 
+    --verde-hover: #256b29; 
+ 
+    --azul: #1565C0; 
+    --azul-escuro: #ffffff; 
+ 
+    --branco: #ffffff; 
+    --fundo: #F5F7F6; 
+    --cinza: #6b7280; 
+    --cinza-claro: #e5e7eb; 
+    --borda: #ffffff; 
+ 
+    --vermelho: #d93025; 
+    --amarelo: #f4b400; 
+ 
+    --sombra: 0 4px 15px rgba(0, 0, 0, 0.07); 
+} 
+ 
+body { 
+    font-family: Arial, Helvetica, sans-serif; 
+    background: var(--fundo); 
+    color: #263238; 
+} 
+ 
+/* ========================================================= 
+   LAYOUT 
+========================================================= */ 
+ 
+.dashboard-page { 
+    display: flex; 
+    min-height: 100vh; 
+} 
+ 
+/* ========================================================= 
+   SIDEBAR 
+========================================================= */ 
+ 
+.sidebar { 
+    width: 245px; 
+    min-height: 100vh; 
+ 
+    background: var(--azul-escuro); 
+    color: var(#1f2937); 
+ 
+    display: flex; 
+    flex-direction: column; 
+ 
+    position: fixed; 
+    left: 0; 
+    top: 0; 
+    bottom: 0; 
+ 
+    z-index: 100; 
+} 
+ 
+.sidebar-logo { 
+    height: 95px; 
+ 
+    display: flex; 
+    align-items: center; 
+ 
+    gap: 10px; 
+    padding: 20px; 
+} 
+ 
+.logo-icon { 
+    width: 45px; 
+    height: 45px; 
+ 
+    border-radius: 50%; 
+ 
+    background: var(--verde); 
+    color: white; 
+ 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+ 
+    font-size: 24px; 
+} 
+ 
+.sidebar-logo h2 { 
+    font-size: 18px; 
+} 
+ 
+.sidebar-logo span { 
+    display: block; 
+ 
+    margin-top: 3px; 
+ 
+    font-size: 10px; 
+    color: #22a652; 
+} 
+ 
+/* ========================================================= 
+   MENU 
+========================================================= */ 
+ 
+.menu { 
+    padding: 15px 12px; 
+} 
+ 
+.menu-item { 
+    display: flex; 
+    align-items: center; 
+ 
+    gap: 12px; 
+ 
+    width: 100%; 
+ 
+    padding: 12px 14px; 
+ 
+    margin-bottom: 6px; 
+ 
+    border-radius: 7px; 
+ 
+    color: #6b7280; 
+    text-decoration: none; 
+ 
+    font-size: 13px; 
+ 
+    transition: 0.2s; 
+} 
+ 
+.menu-item span { 
+    width: 20px; 
+    text-align: center; 
+} 
+ 
+.menu-item:hover { 
+    background: rgba(255, 255, 255, 0.08); 
+} 
+ 
+.menu-item.active { 
+    background: var(--verde); 
+    color: white; 
+    font-weight: bold; 
+} 
+ 
+.sidebar-bottom { 
+    margin-top: auto; 
+    padding: 15px 12px; 
+} 
+ 
+.logout:hover { 
+    background: rgba(217, 48, 37, 0.15); 
+    color: #ff8a80; 
+} 
+ 
+/* ========================================================= 
+   CONTEÚDO 
+========================================================= */ 
+ 
+.main-content { 
+    margin-left: 245px; 
+ 
+    width: calc(100% - 245px); 
+ 
+    min-height: 100vh; 
+ 
+    padding: 25px 30px; 
+} 
+ 
+/* ========================================================= 
+   TOPBAR 
+========================================================= */ 
+ 
+.topbar { 
+    display: flex; 
+ 
+    justify-content: space-between; 
+    align-items: center; 
+ 
+    margin-bottom: 28px; 
+} 
+ 
+.topbar h1 { 
+    font-size: 26px; 
+    color: var(#1f2937); 
+} 
+ 
+.topbar p { 
+    margin-top: 5px; 
+ 
+    color: var(--cinza); 
+ 
+    font-size: 12px; 
+} 
+ 
+.user { 
+    display: flex; 
+ 
+    align-items: center; 
+ 
+    gap: 10px; 
+ 
+    text-align: right; 
+} 
+ 
+.user strong { 
+    display: block; 
+ 
+    font-size: 13px; 
+} 
+ 
+.user small { 
+    color: var(--cinza); 
+ 
+    font-size: 11px; 
+} 
+ 
+.user-avatar { 
+    width: 38px; 
+    height: 38px; 
+ 
+    border-radius: 50%; 
+ 
+    background: var(--verde); 
+ 
+    color: white; 
+ 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+ 
+    font-weight: bold; 
+} 
+ 
+/* ========================================================= 
+   CABEÇALHO DA PÁGINA 
+========================================================= */ 
+ 
+.page-header { 
+    background: var(--branco); 
+ 
+    padding: 22px; 
+ 
+    border-radius: 10px; 
+ 
+    box-shadow: var(--sombra); 
+ 
+    display: flex; 
+ 
+    justify-content: space-between; 
+    align-items: center; 
+ 
+    margin-bottom: 20px; 
+} 
+ 
+.page-header h2 { 
+    font-size: 19px; 
+ 
+    color: var(--azul-escuro); 
+ 
+    margin-bottom: 5px; 
+} 
+ 
+.page-header p { 
+    font-size: 12px; 
+ 
+    color: var(--cinza); 
+} 
+ 
+/* ========================================================= 
+   BOTÃO NOVA MÁQUINA 
+========================================================= */ 
+ 
+.new-machine-button { 
+    border: none; 
+ 
+    background: var(--verde); 
+ 
+    color: white; 
+ 
+    padding: 11px 18px; 
+ 
+    border-radius: 7px; 
+ 
+    font-weight: bold; 
+ 
+    cursor: pointer; 
+ 
+    transition: 0.2s; 
+} 
+ 
+.new-machine-button:hover { 
+    background: var(--verde-hover); 
+ 
+    transform: translateY(-1px); 
+} 
+ 
+/* ========================================================= 
+   FILTROS 
+========================================================= */ 
+ 
+.filters { 
+    background: white; 
+ 
+    padding: 16px; 
+ 
+    border-radius: 10px; 
+ 
+    box-shadow: var(--sombra); 
+ 
+    display: flex; 
+ 
+    gap: 10px; 
+ 
+    align-items: center; 
+ 
+    margin-bottom: 20px; 
+} 
+ 
+.search-box { 
+    flex: 1; 
+ 
+    display: flex; 
+ 
+    align-items: center; 
+ 
+    gap: 8px; 
+ 
+    border: 1px solid var(--borda); 
+ 
+    border-radius: 7px; 
+ 
+    padding: 0 12px; 
+ 
+    height: 42px; 
+} 
+ 
+.search-box span { 
+    color: var(--cinza); 
+ 
+    font-size: 20px; 
+} 
+ 
+.search-box input { 
+    width: 100%; 
+ 
+    border: none; 
+ 
+    outline: none; 
+ 
+    font-size: 13px; 
+} 
+ 
+.filters select { 
+    height: 42px; 
+ 
+    min-width: 150px; 
+ 
+    border: 1px solid var(--borda); 
+ 
+    border-radius: 7px; 
+ 
+    padding: 0 12px; 
+ 
+    background: white; 
+ 
+    outline: none; 
+ 
+    cursor: pointer; 
+} 
+ 
+.filters select:focus, 
+.search-box:focus-within { 
+    border-color: var(--verde); 
+} 
+ 
+/* ========================================================= 
+   BOTÃO FILTRO 
+========================================================= */ 
+ 
+.filter-button { 
+    height: 42px; 
+ 
+    padding: 0 17px; 
+ 
+    border: 1px solid var(--borda); 
+ 
+    background: white; 
+ 
+    border-radius: 7px; 
+ 
+    cursor: pointer; 
+ 
+    font-weight: bold; 
+ 
+    color: var(--azul-escuro); 
+ 
+    transition: 0.2s; 
+} 
+ 
+.filter-button:hover { 
+    background: #eef7ef; 
+ 
+    border-color: var(--verde); 
+ 
+    color: var(--verde); 
+} 
+ 
+/* ========================================================= 
+   TABELA 
+========================================================= */ 
+ 
+.table-panel { 
+    background: white; 
+ 
+    border-radius: 10px; 
+ 
+    box-shadow: var(--sombra); 
+ 
+    overflow: hidden; 
+} 
+ 
+.table-header { 
+    padding: 20px; 
+ 
+    display: flex; 
+ 
+    justify-content: space-between; 
+ 
+    align-items: center; 
+ 
+    border-bottom: 1px solid var(--borda); 
+} 
+ 
+.table-header h2 { 
+    font-size: 17px; 
+} 
+ 
+.table-header span { 
+    color: var(--cinza); 
+ 
+    font-size: 12px; 
+} 
+ 
+.table-container { 
+    width: 100%; 
+ 
+    overflow-x: auto; 
+} 
+ 
+table { 
+    width: 100%; 
+ 
+    border-collapse: collapse; 
+ 
+    font-size: 12px; 
+} 
+ 
+thead { 
+    background: #f8faf9; 
+} 
+ 
+th { 
+    padding: 14px 15px; 
+ 
+    text-align: left; 
+ 
+    color: #4b5563; 
+ 
+    font-size: 11px; 
+ 
+    font-weight: bold; 
+ 
+    border-bottom: 1px solid var(--borda); 
+} 
+ 
+td { 
+    padding: 15px; 
+ 
+    border-bottom: 1px solid #edf0ee; 
+ 
+    color: #374151; 
+} 
+ 
+tbody tr { 
+    transition: 0.15s; 
+} 
+ 
+tbody tr:hover { 
+    background: #f8fbf9; 
+} 
+ 
+/* ========================================================= 
+   STATUS 
+========================================================= */ 
+ 
+.status { 
+    display: inline-flex; 
+ 
+    align-items: center; 
+ 
+    gap: 5px; 
+ 
+    padding: 5px 9px; 
+ 
+    border-radius: 20px; 
+ 
+    font-size: 10px; 
+ 
+    font-weight: bold; 
+} 
+ 
+.status.ativo { 
+    background: #e8f5e9; 
+ 
+    color: var(--verde); 
+} 
+ 
+.status.manutencao { 
+    background: #fff8e1; 
+ 
+    color: #b77900; 
+} 
+ 
+.status.parada { 
+    background: #ffebee; 
+ 
+    color: var(--vermelho); 
+} 
+ 
+/* ========================================================= 
+   AÇÕES DA TABELA 
+========================================================= */ 
+ 
+.action-button { 
+    border: none; 
+ 
+    background: transparent; 
+ 
+    cursor: pointer; 
+ 
+    font-size: 16px; 
+ 
+    margin-right: 7px; 
+ 
+    transition: 0.2s; 
+} 
+ 
+.action-button:hover { 
+    transform: scale(1.15); 
+} 
+ 
+.action-view { 
+    color: var(--azul); 
+} 
+ 
+.action-edit { 
+    color: var(--verde); 
+} 
+ 
+.action-delete { 
+    color: var(--vermelho); 
+} 
+ 
+/* ========================================================= 
+   PAGINAÇÃO 
+========================================================= */ 
+ 
+.pagination { 
+    display: flex; 
+ 
+    justify-content: flex-end; 
+ 
+    align-items: center; 
+ 
+    gap: 5px; 
+ 
+    padding: 18px; 
+} 
+ 
+.pagination button { 
+    min-width: 34px; 
+    height: 34px; 
+ 
+    border: 1px solid var(--borda); 
+ 
+    background: white; 
+ 
+    border-radius: 6px; 
+ 
+    cursor: pointer; 
+ 
+    font-size: 11px; 
+ 
+    transition: 0.2s; 
+} 
+ 
+.pagination button:hover { 
+    border-color: var(--verde); 
+ 
+    color: var(--verde); 
+} 
+ 
+.pagination .active { 
+    background: var(--verde); 
+ 
+    border-color: var(--verde); 
+ 
+    color: white; 
+} 
+ 
+/* ========================================================= 
+   MODAL 
+========================================================= */ 
+ 
+.modal { 
+    position: fixed; 
+ 
+    inset: 0; 
+ 
+    background: rgba(0, 0, 0, 0.45); 
+ 
+    display: none; 
+ 
+    align-items: center; 
+ 
+    justify-content: center; 
+ 
+    z-index: 999; 
+} 
+ 
+.modal.show { 
+    display: flex; 
+} 
+ 
+.modal-box { 
+    position: relative; 
+ 
+    width: 430px; 
+ 
+    max-width: 90%; 
+ 
+    background: white; 
+ 
+    padding: 28px; 
+ 
+    border-radius: 12px; 
+ 
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2); 
+} 
+ 
+.modal-box h2 { 
+    color: var(--azul-escuro); 
+ 
+    margin-bottom: 5px; 
+} 
+ 
+.modal-box > p { 
+    color: var(--cinza); 
+ 
+    font-size: 12px; 
+ 
+    margin-bottom: 22px; 
+} 
+ 
+.fechar-modal { 
+    position: absolute; 
+ 
+    top: 12px; 
+    right: 15px; 
+ 
+    border: none; 
+ 
+    background: transparent; 
+ 
+    font-size: 26px; 
+ 
+    cursor: pointer; 
+ 
+    color: var(--cinza); 
+} 
+ 
+.fechar-modal:hover { 
+    color: var(--vermelho); 
+} 
+ 
+/* ========================================================= 
+   FORMULÁRIO 
+========================================================= */ 
+ 
+.form-group { 
+    margin-bottom: 16px; 
+} 
+ 
+.form-group label { 
+    display: block; 
+ 
+    margin-bottom: 7px; 
+ 
+    font-size: 12px; 
+ 
+    font-weight: bold; 
+ 
+    color: #374151; 
+} 
+ 
+.form-group input, 
+.form-group select { 
+    width: 100%; 
+ 
+    height: 43px; 
+ 
+    border: 1px solid var(--borda); 
+ 
+    border-radius: 7px; 
+ 
+    padding: 0 12px; 
+ 
+    outline: none; 
+ 
+    font-size: 13px; 
+ 
+    background: white; 
+} 
+ 
+.form-group input:focus, 
+.form-group select:focus { 
+    border-color: var(--verde); 
+ 
+    box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.08); 
+} 
+ 
+.save-button { 
+    width: 100%; 
+ 
+    height: 45px; 
+ 
+    border: none; 
+ 
+    border-radius: 7px; 
+ 
+    background: var(--verde); 
+ 
+    color: white; 
+ 
+    font-weight: bold; 
+ 
+    cursor: pointer; 
+ 
+    margin-top: 5px; 
+ 
+    transition: 0.2s; 
+} 
+ 
+.save-button:hover { 
+    background: var(--verde-hover); 
+} 
+ 
+/* ========================================================= 
+   FOOTER 
+========================================================= */ 
+ 
+footer { 
+    text-align: center; 
+ 
+    color: #9ca3af; 
+ 
+    font-size: 11px; 
+ 
+    padding: 25px 0; 
+} 
+
+
+/* =========================================================
+   RESUMO DO SISTEMA
+   VISUAL IGUAL AO MODELO
+========================================================= */
+
+.machine-summary {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    position: relative;
+
+    background: #ffffff;
+
+    border: 1px solid #dfe7f1;
+
+    border-radius: 20px;
+
+    box-shadow: 0 6px 24px rgba(30, 60, 90, 0.08);
+
+    overflow: hidden;
+
+    padding-top: 112px;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================================================
+   CABEÇALHO
+========================================================= */
+
+.machine-summary::before {
+    content: "⚙";
+
+    position: absolute;
+
+    top: 28px;
+    left: 50px;
+
+    width: 60px;
+    height: 60px;
+
+    border-radius: 50%;
+
+    background: #eeeaff;
+
+    color: #7257dc;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 30px;
+}
+
+.machine-summary::after {
+    content: "Resumo do Sistema";
+
+    position: absolute;
+
+    top: 43px;
+    left: 135px;
+
+    color: #172554;
+
+    font-size: 25px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   CARDS
+========================================================= */
+
+.machine-summary .summary-card {
+
+    position: relative;
+
+    min-height: 180px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 35px;
+
+    padding: 25px 45px;
+
+    background: #ffffff;
+
+    border: none;
+
+    border-radius: 0;
+
+    box-shadow: none;
+}
+
+
+/* =========================================================
+   DIVISÓRIAS
+========================================================= */
+
+.machine-summary .summary-card:not(:last-child)::after {
+
+    content: "";
+
+    position: absolute;
+
+    right: 0;
+
+    top: 35px;
+    bottom: 35px;
+
+    width: 2px;
+
+    background: #e1e7ef;
+}
+
+
+/* =========================================================
+   ÍCONES
+========================================================= */
+
+.machine-summary .summary-card > span {
+
+    width: 84px;
+    height: 84px;
+
+    min-width: 84px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 0;
+
+    color: white;
+
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================================
+   ÍCONE TOTAL
+========================================================= */
+
+.machine-summary .summary-card:nth-child(1) > span {
+
+    background: #3ccc78;
+}
+
+.machine-summary .summary-card:nth-child(1) > span::before {
+
+    content: "✓";
+
+    font-size: 50px;
+
+    font-weight: bold;
+
+    line-height: 1;
+}
+
+
+/* =========================================================
+   ÍCONE ATIVAS
+========================================================= */
+
+.machine-summary .summary-card:nth-child(2) > span {
+
+    background: #ffbd25;
+}
+
+.machine-summary .summary-card:nth-child(2) > span::before {
+
+    content: "▶";
+
+    font-size: 38px;
+
+    margin-left: 5px;
+}
+
+
+/* =========================================================
+   ÍCONE MANUTENÇÃO
+========================================================= */
+
+.machine-summary .summary-card:nth-child(3) > span {
+
+    background: #ef3f57;
+}
+
+.machine-summary .summary-card:nth-child(3) > span::before {
+
+    content: "⚒";
+
+    font-size: 42px;
+}
+
+
+/* =========================================================
+   ÍCONE PARADAS
+========================================================= */
+
+.machine-summary .summary-card:nth-child(4) > span {
+
+    background: #7355d9;
+}
+
+.machine-summary .summary-card:nth-child(4) > span::before {
+
+    content: "Ⅱ";
+
+    font-size: 48px;
+
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   ÁREA DO TEXTO
+========================================================= */
+
+.machine-summary .summary-card > div {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+
+/* =========================================================
+   TÍTULO
+========================================================= */
+
+.machine-summary .summary-card small {
+
+    color: #64748b;
+
+    font-size: 22px;
+
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   NÚMERO
+========================================================= */
+
+.machine-summary .summary-card strong {
+
+    color: #172554;
+
+    font-size: 52px;
+
+    line-height: 1;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   EFEITO AO PASSAR O MOUSE
+========================================================= */
+
+.machine-summary .summary-card:hover {
+
+    background: #fcfdff;
+}
+
+
+/* =========================================================
+   RESPONSIVO
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .machine-summary {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    .machine-summary .summary-card:nth-child(2)::after {
+
+        display: none;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .machine-summary {
+
+        grid-template-columns: 1fr;
+
+        padding-top: 100px;
+    }
+
+    .machine-summary::before {
+
+        left: 25px;
+    }
+
+    .machine-summary::after {
+
+        left: 100px;
+
+        font-size: 20px;
+    }
+
+    .machine-summary .summary-card {
+
+        min-height: 140px;
+
+        padding: 25px 30px;
+    }
+
+    .machine-summary .summary-card::after {
+
+        display: none !important;
+    }
+
+    .machine-summary .summary-card > span {
+
+        width: 65px;
+        height: 65px;
+
+        min-width: 65px;
+    }
+
+    .machine-summary .summary-card small {
+
+        font-size: 18px;
+    }
+
+    .machine-summary .summary-card strong {
+
+        font-size: 40px;
+    }
+}
+
+/* =========================================================
+   CENTRALIZAR RESUMO DO SISTEMA
+========================================================= */
+
+.machine-summary {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    width: 100%;
+    overflow: hidden;
+
+    padding-top: 105px;
+    margin-bottom: 25px;
+
+    border-radius: 20px;
+}
+
+
+/* Centraliza cada indicador */
+.machine-summary .summary-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 25px;
+
+    min-width: 0;
+    width: 100%;
+
+    padding: 25px 20px;
+}
+
+
+/* Evita que o conteúdo fique cortado */
+.machine-summary .summary-card > div {
+    min-width: 0;
+}
+
+
+/* Ícones um pouco menores para caberem melhor */
+.machine-summary .summary-card > span {
+    width: 78px;
+    height: 78px;
+    min-width: 78px;
+}
+
+
+/* Texto */
+.machine-summary .summary-card small {
+    font-size: 21px;
+}
+
+.machine-summary .summary-card strong {
+    font-size: 48px;
+}
+
+
+/* Divisórias centralizadas */
+.machine-summary .summary-card:not(:last-child)::after {
+    top: 35px;
+    bottom: 35px;
+}
+
+
+/* =========================================================
+   RESPONSIVO
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .machine-summary {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .machine-summary .summary-card:nth-child(2)::after {
+        display: none;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .machine-summary {
+        grid-template-columns: 1fr;
+    }
+
+    .machine-summary .summary-card {
+        justify-content: flex-start;
+        padding: 25px 30px;
+    }
+}
+
+
+/* Cabeçalho do resumo */
+
+.stats-grid::before {
+    content: "⚙  Resumo do Sistema";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+    height: 72px;
+
+    display: flex;
+    align-items: center;
+
+    padding-left: 32px;
+
+    background: linear-gradient(
+        90deg,
+        #f6f8ff,
+        #ffffff
+    );
+
+    border-bottom: 1px solid #edf1f6;
+
+    color: #172554;
+
+    font-size: 22px;
+
+    font-weight: 700;
+}
+
+
+/* Cada indicador */
+
+.stats-grid .stat-card {
+    position: relative;
+
+    min-height: 155px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 28px 32px;
+
+    background: #ffffff;
+
+    border: none;
+
+    border-radius: 0;
+
+    box-shadow: none;
+}
+
+
+/* Divisórias */
+
+.stats-grid .stat-card:not(:last-child)::after {
+    content: "";
+
+    position: absolute;
+
+    right: 0;
+
+    top: 28px;
+    bottom: 28px;
+
+    width: 1px;
+
+    background: #e1e7ef;
+}
+
+
+/* Ícones */
+
+.stats-grid .stat-card > span:first-child {
+    width: 58px;
+    height: 58px;
+
+    min-width: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    color: #ffffff;
+
+    font-size: 25px;
+
+    box-shadow: 0 6px 15px rgba(15, 23, 42, 0.10);
+}
+
+
+/* Verde - Total */
+
+.stats-grid .stat-card:nth-child(1) > span:first-child {
+    background: linear-gradient(
+        135deg,
+        #43dc83,
+        #20b866
+    );
+}
+
+
+/* Amarelo - Ativas */
+
+.stats-grid .stat-card:nth-child(2) > span:first-child {
+    background: linear-gradient(
+        135deg,
+        #ffd04d,
+        #f2ad19
+    );
+}
+
+
+/* Vermelho - Manutenção */
+
+.stats-grid .stat-card:nth-child(3) > span:first-child {
+    background: linear-gradient(
+        135deg,
+        #ff6373,
+        #e9364d
+    );
+}
+
+
+/* Roxo - Paradas */
+
+.stats-grid .stat-card:nth-child(4) > span:first-child {
+    background: linear-gradient(
+        135deg,
+        #9071ed,
+        #6544d7
+    );
+}
+
+
+/* Área do texto */
+
+.stats-grid .stat-card > div {
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+
+/* Nome do indicador */
+
+.stats-grid .stat-card .stat-label {
+    color: #64748b;
+
+    font-size: 16px;
+
+    font-weight: 500;
+}
+
+
+/* Número */
+
+.stats-grid .stat-card .stat-value {
+    color: #172554;
+
+    font-size: 34px;
+
+    line-height: 1;
+
+    font-weight: 700;
+}
+
+
+/* Efeito ao passar o mouse */
+
+.stats-grid .stat-card:hover {
+    background: #fcfdff;
+}
+
+
+/* =========================================================
+   RESPONSIVO DO RESUMO
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stats-grid .stat-card:nth-child(2)::after {
+        display: none;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+
+        padding-top: 65px;
+    }
+
+    .stats-grid::before {
+        height: 65px;
+
+        padding-left: 20px;
+
+        font-size: 18px;
+    }
+
+    .stats-grid .stat-card {
+        min-height: 125px;
+
+        padding: 22px;
+    }
+
+    .stats-grid .stat-card::after {
+        display: none !important;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVO
+========================================================= */
+
+@media (max-width: 1000px) { 
+ 
+    .sidebar { 
+        width: 210px; 
+    } 
+ 
+    .main-content { 
+        margin-left: 210px; 
+ 
+        width: calc(100% - 210px); 
+ 
+        padding: 20px; 
+    } 
+ 
+    .filters { 
+        flex-wrap: wrap; 
+    } 
+ 
+    .search-box { 
+        flex-basis: 100%; 
+    } 
+} 
+ 
+@media (max-width: 700px) { 
+ 
+    .sidebar { 
+        position: relative; 
+ 
+        width: 100%; 
+ 
+        min-height: auto; 
+    } 
+ 
+    .dashboard-page { 
+        display: block; 
+    } 
+ 
+    .main-content { 
+        margin-left: 0; 
+ 
+        width: 100%; 
+ 
+        padding: 15px; 
+    } 
+ 
+    .sidebar-logo { 
+        justify-content: center; 
+    } 
+ 
+    .menu { 
+        display: flex; 
+ 
+        overflow-x: auto; 
+ 
+        gap: 5px; 
+    } 
+ 
+    .menu-item { 
+        white-space: nowrap; 
+ 
+        width: auto; 
+    } 
+ 
+    .sidebar-bottom { 
+        display: none; 
+    } 
+ 
+    .page-header { 
+        flex-direction: column; 
+ 
+        align-items: flex-start; 
+ 
+        gap: 15px; 
+    } 
+ 
+    .new-machine-button { 
+        width: 100%; 
+    } 
+ 
+    .topbar { 
+        gap: 15px; 
+    } 
+ 
+    .user { 
+        display: none; 
+    } 
+ 
+    .filters select { 
+        width: 100%; 
+    } 
+ 
+    .filter-button { 
+        width: 100%; 
+    } 
+}

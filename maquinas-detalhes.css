@@ -1,0 +1,1012 @@
+
+:root{
+ --primary:#22A652;
+ --primary-dark:#1b8a44;
+ --bg:#f6f8fb;
+ --card:#ffffff;
+ --text:#1f2937;
+ --muted:#6b7280;
+ --border:#e5e7eb;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Inter,Arial,sans-serif;background:var(--bg);color:var(--text)}
+.sidebar{
+position:fixed;left:0;top:0;width:280px;height:100vh;
+background:#fff;border-right:1px solid var(--border);
+}
+.main-content{margin-left:280px;padding:24px}
+.topbar,.header{
+background:#fff;border:1px solid var(--border);
+border-radius:16px;padding:18px 24px;margin-bottom:24px;
+}
+.card,.stat-card,.chart-card,.table-card{
+background:#fff;border:1px solid var(--border);
+border-radius:18px;box-shadow:0 2px 10px rgba(0,0,0,.04);
+}
+button,.btn{
+background:var(--primary);color:#fff;border:none;
+border-radius:12px;padding:10px 18px;
+}
+table{background:#fff;border-radius:16px;overflow:hidden}
+input,select,textarea{
+border:1px solid var(--border);border-radius:12px;padding:12px;
+}
+
+
+/* Original preserved below */
+
+/* =========================================================
+   ECOFACTORY - DETALHES DA MÁQUINA
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --verde: #2E7D32;
+    --verde-claro: #66BB6A;
+    --verde-hover: #256b29;
+
+    --azul: #1565C0;
+    --azul-escuro: #263238;
+
+    --branco: #ffffff;
+    --fundo: #F5F7F6;
+
+    --cinza: #6b7280;
+    --cinza-claro: #e5e7eb;
+    --borda: #e1e5e2;
+
+    --vermelho: #d93025;
+    --amarelo: #f4b400;
+
+    --sombra: 0 4px 15px rgba(0, 0, 0, 0.07);
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--fundo);
+    color: var(--azul-escuro);
+}
+
+.dashboard-page {
+    min-height: 100vh;
+    display: flex;
+}
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+
+    width: 245px;
+
+    background: var(--azul-escuro);
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+
+    z-index: 100;
+}
+
+.sidebar-logo {
+    min-height: 95px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 20px;
+}
+
+.logo-icon {
+    width: 45px;
+    height: 45px;
+
+    border-radius: 50%;
+
+    background: var(--verde);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 23px;
+}
+
+.sidebar-logo h2 {
+    font-size: 18px;
+}
+
+.sidebar-logo span {
+    display: block;
+
+    margin-top: 3px;
+
+    font-size: 10px;
+
+    color: #cfd8dc;
+}
+
+/* =========================================================
+   MENU
+========================================================= */
+
+.menu {
+    padding: 12px;
+}
+
+.menu-item {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 12px 14px;
+
+    margin-bottom: 6px;
+
+    border-radius: 7px;
+
+    color: #e8eeee;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    transition: 0.2s;
+}
+
+.menu-item span {
+    width: 20px;
+    text-align: center;
+}
+
+.menu-item:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.menu-item.active {
+    background: var(--verde);
+    color: white;
+    font-weight: bold;
+}
+
+.sidebar-bottom {
+    margin-top: auto;
+    padding: 12px;
+}
+
+.logout:hover {
+    background: rgba(217, 48, 37, 0.15);
+    color: #ff8a80;
+}
+
+/* =========================================================
+   CONTEÚDO
+========================================================= */
+
+.main-content {
+    width: calc(100% - 245px);
+
+    margin-left: 245px;
+
+    min-height: 100vh;
+
+    padding: 25px 30px;
+}
+
+/* =========================================================
+   TOPBAR
+========================================================= */
+
+.topbar {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 25px;
+}
+
+.topbar h1 {
+    font-size: 26px;
+}
+
+.topbar p {
+    margin-top: 5px;
+
+    color: var(--cinza);
+
+    font-size: 12px;
+}
+
+.user {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    text-align: right;
+}
+
+.user strong {
+    display: block;
+
+    font-size: 13px;
+}
+
+.user small {
+    color: var(--cinza);
+
+    font-size: 11px;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+
+    background: var(--verde);
+
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: bold;
+}
+
+/* =========================================================
+   BOTÃO VOLTAR
+========================================================= */
+
+.back-button {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-bottom: 18px;
+
+    padding: 9px 14px;
+
+    border: 1px solid var(--borda);
+
+    border-radius: 7px;
+
+    background: white;
+
+    color: var(--azul-escuro);
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    transition: 0.2s;
+}
+
+.back-button:hover {
+    border-color: var(--verde);
+
+    color: var(--verde);
+
+    transform: translateX(-2px);
+}
+
+/* =========================================================
+   CABEÇALHO DA MÁQUINA
+========================================================= */
+
+.machine-header {
+    background: white;
+
+    border-radius: 10px;
+
+    box-shadow: var(--sombra);
+
+    padding: 24px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+
+.machine-title {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+.machine-icon {
+    width: 60px;
+    height: 60px;
+
+    border-radius: 10px;
+
+    background: #e9f8ed;
+
+    color: var(--verde);
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 29px;
+}
+
+.machine-title h2 {
+    font-size: 22px;
+
+    margin-bottom: 5px;
+}
+
+.machine-title p {
+    color: var(--cinza);
+
+    font-size: 12px;
+}
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.status-badge {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    padding: 7px 12px;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+
+    font-weight: bold;
+}
+
+.status-ativo {
+    background: #e8f5e9;
+    color: var(--verde);
+}
+
+.status-manutencao {
+    background: #fff8e1;
+    color: #b77900;
+}
+
+.status-parada {
+    background: #ffebee;
+    color: var(--vermelho);
+}
+
+/* =========================================================
+   BOTÕES DE AÇÃO
+========================================================= */
+
+.machine-actions {
+    display: flex;
+
+    gap: 8px;
+
+    margin-top: 12px;
+}
+
+.action-button {
+    border: none;
+
+    border-radius: 7px;
+
+    padding: 9px 13px;
+
+    cursor: pointer;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    transition: 0.2s;
+}
+
+.edit-button {
+    background: #e8f5e9;
+    color: var(--verde);
+}
+
+.edit-button:hover {
+    background: var(--verde);
+    color: white;
+}
+
+.maintenance-button {
+    background: #fff8e1;
+    color: #b77900;
+}
+
+.maintenance-button:hover {
+    background: var(--amarelo);
+    color: white;
+}
+
+/* =========================================================
+   GRID PRINCIPAL
+========================================================= */
+
+.details-grid {
+    display: grid;
+
+    grid-template-columns: 2fr 1fr;
+
+    gap: 18px;
+
+    margin-bottom: 20px;
+}
+
+/* =========================================================
+   PAINEL
+========================================================= */
+
+.panel {
+    background: white;
+
+    border: 1px solid var(--borda);
+
+    border-radius: 10px;
+
+    padding: 22px;
+
+    box-shadow: var(--sombra);
+}
+
+.panel h2 {
+    font-size: 16px;
+
+    margin-bottom: 5px;
+}
+
+.panel-description {
+    color: var(--cinza);
+
+    font-size: 11px;
+
+    margin-bottom: 20px;
+}
+
+/* =========================================================
+   INFORMAÇÕES
+========================================================= */
+
+.info-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 15px;
+}
+
+.info-item {
+    padding: 14px;
+
+    border: 1px solid #edf0ee;
+
+    border-radius: 8px;
+
+    background: #fafcfb;
+}
+
+.info-item span {
+    display: block;
+
+    color: var(--cinza);
+
+    font-size: 10px;
+
+    margin-bottom: 6px;
+}
+
+.info-item strong {
+    font-size: 13px;
+
+    color: var(--azul-escuro);
+}
+
+/* =========================================================
+   INDICADORES
+========================================================= */
+
+.indicator {
+    margin-bottom: 20px;
+}
+
+.indicator:last-child {
+    margin-bottom: 0;
+}
+
+.indicator-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 7px;
+
+    font-size: 11px;
+}
+
+.indicator-header strong {
+    color: var(--verde);
+}
+
+.progress {
+    width: 100%;
+
+    height: 8px;
+
+    background: #edf0ee;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+.progress div {
+    height: 100%;
+
+    background: var(--verde);
+
+    border-radius: 10px;
+
+    transition: width 0.5s ease;
+}
+
+/* =========================================================
+   ESTATÍSTICAS
+========================================================= */
+
+.stats-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 12px;
+
+    margin-top: 18px;
+}
+
+.stat-card {
+    padding: 16px;
+
+    border-radius: 8px;
+
+    background: #f8faf9;
+
+    border: 1px solid var(--borda);
+}
+
+.stat-card .stat-icon {
+    font-size: 20px;
+
+    margin-bottom: 10px;
+}
+
+.stat-card p {
+    color: var(--cinza);
+
+    font-size: 10px;
+
+    margin-bottom: 4px;
+}
+
+.stat-card h3 {
+    font-size: 20px;
+}
+
+/* =========================================================
+   HISTÓRICO
+========================================================= */
+
+.history {
+    margin-top: 20px;
+}
+
+.history-item {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 12px;
+
+    padding: 14px 0;
+
+    border-bottom: 1px solid #edf0ee;
+}
+
+.history-item:last-child {
+    border-bottom: none;
+}
+
+.history-icon {
+    width: 32px;
+    height: 32px;
+
+    border-radius: 50%;
+
+    background: #e9f8ed;
+
+    color: var(--verde);
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+}
+
+.history-content strong {
+    display: block;
+
+    font-size: 12px;
+
+    margin-bottom: 3px;
+}
+
+.history-content span {
+    color: var(--cinza);
+
+    font-size: 10px;
+}
+
+/* =========================================================
+   ALERTAS
+========================================================= */
+
+.alert {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 12px;
+
+    border-radius: 7px;
+
+    margin-bottom: 10px;
+
+    font-size: 11px;
+}
+
+.alert:last-child {
+    margin-bottom: 0;
+}
+
+.alert-success {
+    background: #e8f5e9;
+    color: var(--verde);
+}
+
+.alert-warning {
+    background: #fff8e1;
+    color: #9a6700;
+}
+
+.alert-danger {
+    background: #ffebee;
+    color: var(--vermelho);
+}
+
+/* =========================================================
+   TABELA DE MANUTENÇÃO
+========================================================= */
+
+.maintenance-table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    font-size: 11px;
+}
+
+.maintenance-table th {
+    padding: 12px;
+
+    text-align: left;
+
+    background: #f8faf9;
+
+    color: #4b5563;
+
+    border-bottom: 1px solid var(--borda);
+}
+
+.maintenance-table td {
+    padding: 12px;
+
+    border-bottom: 1px solid #edf0ee;
+}
+
+.maintenance-table tr:hover {
+    background: #fafcfb;
+}
+
+/* =========================================================
+   MODAL
+========================================================= */
+
+.modal {
+    position: fixed;
+
+    inset: 0;
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(0, 0, 0, 0.45);
+
+    z-index: 999;
+}
+
+.modal.show {
+    display: flex;
+}
+
+.modal-box {
+    width: 480px;
+
+    max-width: 92%;
+
+    position: relative;
+
+    background: white;
+
+    border-radius: 12px;
+
+    padding: 25px;
+
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+}
+
+.modal-box h2 {
+    margin-bottom: 5px;
+}
+
+.modal-box > p {
+    color: var(--cinza);
+
+    font-size: 11px;
+
+    margin-bottom: 20px;
+}
+
+.close-modal {
+    position: absolute;
+
+    right: 15px;
+    top: 10px;
+
+    border: none;
+
+    background: transparent;
+
+    font-size: 25px;
+
+    color: var(--cinza);
+
+    cursor: pointer;
+}
+
+.close-modal:hover {
+    color: var(--vermelho);
+}
+
+/* =========================================================
+   FORMULÁRIO
+========================================================= */
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 6px;
+
+    font-size: 11px;
+
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+
+    border: 1px solid var(--borda);
+
+    border-radius: 7px;
+
+    padding: 10px;
+
+    outline: none;
+
+    font-family: inherit;
+
+    font-size: 12px;
+}
+
+.form-group input,
+.form-group select {
+    height: 42px;
+}
+
+.form-group textarea {
+    min-height: 80px;
+
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--verde);
+
+    box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.08);
+}
+
+.save-button {
+    width: 100%;
+
+    height: 44px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: var(--verde);
+
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.save-button:hover {
+    background: var(--verde-hover);
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+    text-align: center;
+
+    color: #9ca3af;
+
+    font-size: 10px;
+
+    padding: 25px 0;
+}
+
+/* =========================================================
+   RESPONSIVO
+========================================================= */
+
+@media (max-width: 1050px) {
+
+    .sidebar {
+        width: 210px;
+    }
+
+    .main-content {
+        width: calc(100% - 210px);
+
+        margin-left: 210px;
+
+        padding: 20px;
+    }
+
+    .details-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 750px) {
+
+    .dashboard-page {
+        display: block;
+    }
+
+    .sidebar {
+        position: relative;
+
+        width: 100%;
+    }
+
+    .main-content {
+        width: 100%;
+
+        margin-left: 0;
+
+        padding: 15px;
+    }
+
+    .menu {
+        display: flex;
+
+        overflow-x: auto;
+
+        gap: 5px;
+    }
+
+    .menu-item {
+        width: auto;
+
+        white-space: nowrap;
+    }
+
+    .sidebar-bottom {
+        display: none;
+    }
+
+    .machine-header {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+    .machine-actions {
+        width: 100%;
+    }
+
+    .action-button {
+        flex: 1;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .topbar {
+        gap: 15px;
+    }
+
+    .user {
+        display: none;
+    }
+}

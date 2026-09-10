@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>EcoFactory - Login</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+    <main class="login-page">
+
+
+        <!-- =========================
+             LADO ESQUERDO
+        ========================== -->
+
+        <section class="login-image">
+
+            <div class="image-overlay">
+
+                <div class="eco-symbol">
+                    ♻
+                </div>
+
+                <h1>
+                    EcoFactory
+                </h1>
+
+                <p>
+                    Indústria Inteligente
+                </p>
+
+                <div class="login-slogan">
+
+                    Tecnologia para uma indústria
+                    mais eficiente e sustentável.
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             LADO DIREITO
+        ========================== -->
+
+        <section class="login-container">
+
+            <div class="login-box">
+
+
+                <!-- =========================
+                     LOGO
+                ========================== -->
+
+                <div class="login-logo">
+
+                    <div class="logo-icon">
+                        ⚙
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            EcoFactory
+                        </h2>
+
+                        <span>
+                            Indústria Inteligente
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =========================
+                     TÍTULO
+                ========================== -->
+
+                <div class="login-title">
+
+                    <h1>
+                        Acesse sua conta
+                    </h1>
+
+                    <p>
+                        Entre para acessar o sistema
+                    </p>
+
+                </div>
+
+
+                <!-- =========================
+                     FORMULÁRIO
+                ========================== -->
+
+                <form id="loginForm">
+
+
+                    <!-- EMAIL -->
+
+                    <div class="input-group">
+
+                        <label for="email">
+                            E-mail
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="seu@email.com"
+                            autocomplete="email"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- SENHA -->
+
+                    <div class="input-group">
+
+                        <label for="senha">
+                            Senha
+                        </label>
+
+                        <div class="password-input">
+
+                            <input
+                                type="password"
+                                id="senha"
+                                name="senha"
+                                placeholder="Digite sua senha"
+                                autocomplete="current-password"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                id="mostrarSenha"
+                                class="eye-button"
+                                aria-label="Mostrar senha"
+                            >
+                                👁
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =========================
+                         OPÇÕES
+                    ========================== -->
+
+                    <div class="login-options">
+
+
+                        <!-- LEMBRAR -->
+
+                        <label class="remember">
+
+                            <input
+                                type="checkbox"
+                                id="lembrar"
+                                name="lembrar"
+                            >
+
+                            <span>
+                                Lembrar-me
+                            </span>
+
+                        </label>
+
+
+                        <!-- CRIAR CONTA -->
+
+                        <a href="cadastro.html">
+
+                            Criar uma conta
+
+                        </a>
+
+                    </div>
+
+
+                    <!-- =========================
+                         BOTÃO ENTRAR
+                    ========================== -->
+
+                    <button
+                        type="submit"
+                        class="login-button"
+                        id="loginButton"
+                    >
+
+                        Entrar
+
+                    </button>
+
+
+                    <!-- =========================
+                         MENSAGEM
+                    ========================== -->
+
+                    <p
+                        id="mensagem"
+                        class="mensagem"
+                        aria-live="polite"
+                    ></p>
+
+
+                    <!-- =========================
+                         DIVISOR
+                    ========================== -->
+
+                    <div class="divider">
+
+                        <span>
+                            ou
+                        </span>
+
+                    </div>
+
+
+                    <!-- =========================
+                         GOOGLE
+                    ========================== -->
+
+                    <button
+                        type="button"
+                        class="google-button"
+                        id="googleButton"
+                    >
+
+                        <span class="google-icon">
+                            G
+                        </span>
+
+                        Entrar com Google
+
+                    </button>
+
+
+                </form>
+
+
+                <!-- =========================
+                     LINK CADASTRO
+                ========================== -->
+
+                <div class="register-link">
+
+                    <span>
+                        Ainda não possui uma conta?
+                    </span>
+
+                    <a href="cadastro.html">
+                        Criar conta
+                    </a>
+
+                </div>
+
+
+                <!-- =========================
+                     RODAPÉ
+                ========================== -->
+
+                <footer class="login-footer">
+
+                    © 2026 EcoFactory.
+                    Todos os direitos reservados.
+
+                </footer>
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>

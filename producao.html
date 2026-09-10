@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>EcoFactory - Produção</title>
+
+    <link rel="stylesheet" href="producao.css">
+</head>
+
+<body>
+
+<div class="dashboard-page">
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+
+            <div class="logo-icon">
+                ♻
+            </div>
+
+            <div>
+                <h2>EcoFactory</h2>
+
+                <span>
+                    Indústria Inteligente
+                </span>
+            </div>
+
+        </div>
+
+
+        <nav class="menu">
+
+            <a href="dashboard.html"
+               class="menu-item">
+
+                <span>▣</span>
+                Dashboard
+
+            </a>
+
+
+            <a href="maquinas.html"
+               class="menu-item">
+
+                <span>⚙</span>
+                Máquinas
+
+            </a>
+
+
+            <a href="producao.html"
+               class="menu-item active">
+
+                <span>▤</span>
+                Produção
+
+            </a>
+
+
+            <a href="consumo.html"
+               class="menu-item">
+
+                <span>◉</span>
+                Energia & Água
+
+            </a>
+
+
+            <a href="ocorrencias.html"
+               class="menu-item">
+
+                <span>⚠</span>
+                Ocorrências
+
+            </a>
+
+
+            <a href="indicadores.html"
+               class="menu-item">
+
+                <span>♻</span>
+                Indicadores
+
+            </a>
+
+
+            <a href="#"
+               class="menu-item">
+
+                <span>⚙</span>
+                Configurações
+
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <a href="#"
+               id="logout"
+               class="menu-item logout">
+
+                <span>↪</span>
+                Sair
+
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =====================================================
+         CONTEÚDO PRINCIPAL
+    ====================================================== -->
+
+    <main class="main-content">
+
+
+        <!-- =================================================
+             TOPBAR
+        ================================================== -->
+
+        <header class="topbar">
+
+            <div>
+
+                <h1>
+                    Produção
+                </h1>
+
+                <p>
+                    Início / Produção
+                </p>
+
+            </div>
+
+
+            <div class="user">
+
+                <div>
+
+                    <strong id="nomeUsuario">
+                        Olá, Cliente
+                    </strong>
+
+                    <small>
+                        Administrador
+                    </small>
+
+                </div>
+
+
+                <div class="user-avatar"
+                     id="userAvatar">
+
+                    C
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- =================================================
+             CABEÇALHO DA PÁGINA
+        ================================================== -->
+
+        <section class="page-header">
+
+            <div>
+
+                <h2>
+                    Cadastro e Consulta
+                </h2>
+
+                <p>
+                    Registre e consulte a produção da indústria.
+                </p>
+
+            </div>
+
+
+            <button
+                type="button"
+                class="new-production-button"
+                id="novaProducao">
+
+                + Nova Produção
+
+            </button>
+
+        </section>
+
+
+        <!-- =================================================
+             FILTROS
+        ================================================== -->
+
+        <section class="filters">
+
+            <div class="filter-group">
+
+                <label for="dataInicio">
+                    Data inicial
+                </label>
+
+                <input
+                    type="date"
+                    id="dataInicio">
+
+            </div>
+
+
+            <div class="filter-group">
+
+                <label for="dataFim">
+                    Data final
+                </label>
+
+                <input
+                    type="date"
+                    id="dataFim">
+
+            </div>
+
+
+            <div class="filter-group">
+
+                <label for="filtroMaquina">
+                    Máquina
+                </label>
+
+                <select id="filtroMaquina">
+
+                    <option value="todos">
+                        Todas
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="filter-group">
+
+                <label for="filtroProduto">
+                    Produto
+                </label>
+
+                <input
+                    type="text"
+                    id="filtroProduto"
+                    placeholder="Buscar produto">
+
+            </div>
+
+
+            <button
+                type="button"
+                class="filter-button"
+                id="buscar">
+
+                Buscar
+
+            </button>
+
+
+            <button
+                type="button"
+                class="clear-button"
+                id="limparFiltros">
+
+                Limpar
+
+            </button>
+
+        </section>
+
+
+        <!-- =================================================
+             TABELA DE PRODUÇÃO
+        ================================================== -->
+
+        <section class="table-panel">
+
+            <div class="table-header">
+
+                <div>
+
+                    <h2>
+                        Registros de produção
+                    </h2>
+
+                    <p>
+                        Histórico da produção cadastrada.
+                    </p>
+
+                </div>
+
+
+                <span id="contador">
+                    0 registros
+                </span>
+
+            </div>
+
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                Data
+                            </th>
+
+                            <th>
+                                Máquina
+                            </th>
+
+                            <th>
+                                Produto
+                            </th>
+
+                            <th>
+                                Quantidade
+                            </th>
+
+                            <th>
+                                Turno
+                            </th>
+
+                            <th>
+                                Ações
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="tabelaProducao">
+                    </tbody>
+
+                </table>
+
+
+                <div
+                    id="semRegistros"
+                    class="sem-registros">
+
+                    Nenhum registro encontrado.
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             RESUMO
+        ================================================== -->
+
+        <section class="summary-grid">
+
+            <div class="summary-card">
+
+                <span>
+                    Produção total
+                </span>
+
+                <strong id="producaoTotal">
+                    0
+                </strong>
+
+                <small>
+                    unidades
+                </small>
+
+            </div>
+
+
+            <div class="summary-card">
+
+                <span>
+                    Registros
+                </span>
+
+                <strong id="totalRegistros">
+                    0
+                </strong>
+
+                <small>
+                    lançamentos
+                </small>
+
+            </div>
+
+
+            <div class="summary-card">
+
+                <span>
+                    Média por registro
+                </span>
+
+                <strong id="mediaProducao">
+                    0
+                </strong>
+
+                <small>
+                    unidades
+                </small>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             RODAPÉ
+        ================================================== -->
+
+        <footer>
+
+            © 2026 EcoFactory.
+            Todos os direitos reservados.
+
+        </footer>
+
+    </main>
+
+</div>
+
+
+<!-- =========================================================
+     MODAL - NOVA PRODUÇÃO
+========================================================= -->
+
+<div
+    class="modal"
+    id="modalProducao">
+
+    <div class="modal-box">
+
+
+        <button
+            type="button"
+            class="fechar-modal"
+            id="fecharModal"
+            aria-label="Fechar">
+
+            ×
+
+        </button>
+
+
+        <h2>
+            Nova Produção
+        </h2>
+
+        <p>
+            Cadastre um novo registro de produção.
+        </p>
+
+
+        <form id="formProducao">
+
+
+            <div class="form-group">
+
+                <label for="dataProducao">
+                    Data
+                </label>
+
+                <input
+                    type="date"
+                    id="dataProducao"
+                    required>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="maquinaProducao">
+                    Máquina
+                </label>
+
+                <select
+                    id="maquinaProducao"
+                    required>
+
+                    <option value="">
+                        Selecione uma máquina
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="produtoProducao">
+                    Produto
+                </label>
+
+                <input
+                    type="text"
+                    id="produtoProducao"
+                    placeholder="Ex: Peça A"
+                    required>
+
+            </div>
+
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label for="quantidadeProducao">
+                        Quantidade
+                    </label>
+
+                    <input
+                        type="number"
+                        id="quantidadeProducao"
+                        min="1"
+                        placeholder="Ex: 320"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="turnoProducao">
+                        Turno
+                    </label>
+
+                    <select
+                        id="turnoProducao"
+                        required>
+
+                        <option value="">
+                            Selecione
+                        </option>
+
+                        <option value="Manhã">
+                            Manhã
+                        </option>
+
+                        <option value="Tarde">
+                            Tarde
+                        </option>
+
+                        <option value="Noite">
+                            Noite
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="mensagemProducao"
+                class="mensagem"
+                aria-live="polite">
+            </div>
+
+
+            <button
+                type="submit"
+                class="save-button">
+
+                Salvar Produção
+
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<script src="producao.js"></script>
+
+</body>
+
+</html>
